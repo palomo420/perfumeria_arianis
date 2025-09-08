@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Subir y Descargar PDF</title>
+</head>
+<body>
+  <h2>Subir un archivo PDF</h2>
+  <form action="subir.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="archivo_pdf" accept="application/pdf" required>
+    <button type="submit">Subir PDF</button>
+  </form>
+
+  <h2>Descargar el PDF</h2>
+  <?php
+    if (file_exists("uploads/archivo.pdf")) {
+      echo '<a href="uploads/archivo.pdf" download>Descargar PDF</a>';
+    } else {
+      echo 'No hay archivo subido aún.';
+    }
+  ?>
+</body>
+</html>

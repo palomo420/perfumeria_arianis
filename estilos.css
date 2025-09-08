@@ -1,0 +1,67 @@
+body{
+    background-color: pink
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+.title-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/logo_perfumeria.png');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.contenido {
+    align-items: center;
+}
+
+.scent-card:hover .scent-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scent-overlay {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.perfume-bottle {
+    transition: transform 0.5s ease;
+}
+
+.perfume-bottle:hover {
+    transform: translateY(-15px) scale(1.05);
+}
+
+.testimonial-card {
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar for carousel */
+.carousel::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.carousel {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.hola{
+    font-family: 'Times New Roman', Times, serif;
+    color: hotpink;
+}

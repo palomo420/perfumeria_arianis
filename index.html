@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essencia - Perfumería de Lujo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="hola.css">
+    <link rel="stylesheet" href="estilos.css"> </head>
+
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center hola">
+                <a href="#" class="title-font text-2x1 font-bold text-amber-800">perfunshop</a>
+            </div>
+         <!-- barra ambuegeza y barras de arba -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-700 hover:text-amber-800">Inicio</a>
+                <a href="#perfumes" class="text-gray-700 hover:text-amber-800">Perfumes</a>
+                <a href="#brands" class="text-gray-700 hover:text-amber-800">Marcas</a>
+                <a href="http://127.0.0.1:5501/ingre.html"class="text-gray-700 hover:text-amber-800" >agregar</a>
+                <a href="#about" class="text-gray-700 hover:text-amber-800">Nosotros</a>
+                <a href="#contact" class="text-gray-700 hover:text-amber-800">Contacto</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-700 hover:text-amber-800"><i class="fas fa-search"></i></a>
+                <a href="#" class="text-gray-700 hover:text-amber-800"><i class="fas fa-user"></i></a>
+                <a href="#" class="text-gray-700 hover:text-amber-800 relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-2 -right-2 bg-amber-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                </a>
+                <button class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#inicio" class="block py-2 text-gray-700 hover:text-amber-800">Inicio</a>
+            <a href="#perfumes" class="block py-2 text-gray-700 hover:text-amber-800">Perfumes</a>
+            <a href="#brands" class="block py-2 text-gray-700 hover:text-amber-800">Marcas</a>
+            <a href="http://127.0.0.1:5501/ingre.html" class="block py-2 text-gray-700 hover:text-amber-800">agregar</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-amber-800">Nosotros</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-amber-800">Contacto</a>
+        </div>
+    </header>
+<!-- fin -->
+ <!-- freagansias  -->
+    <section id="inicio" class="hero-section flex items-center justify-center text-white pt-24">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="title-font text-4xl md:text-6xl font-bold mb-4">Descubre tu fragancia perfecta</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Colección exclusiva de perfumes que capturan la esencia de tu personalidad.</p>
+            <a href="http://127.0.0.1:5501/perfu.html">
+            <button class="bg-amber-800 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300">Explorar colección</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-gray-800">Nuestros destacados</h2>
+                <div class="w-20 h-1 bg-amber-800 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="relative flex justify-center flex-wrap gap-6">
+                <div class="carousel flex overflow-x-auto py-8 scroll-smooth snap-x">
+                    <div class="perfume-bottle flex-shrink-0 w-64 mx-4 bg-gray-50 p-6 rounded-xl shadow-md snap-start text-center">
+                        <div class="h-48 flex items-center justify-center mb-4">
+                            <img src="img/PUREX XS.avif" alt="Perfume 1" class="h-full">
+                        </div>
+                        <h3 class="title-font text-xl font-semibold mb-2">PURE XS</h3>
+                        <p class="text-gray-600 text-sm mb-4">Notas: Sándalo, Vainilla, Rosa</p>
+                        <span class="block text-amber-800 text-lg font-bold mb-4">$80.000</span>
+                        <button class="bg-amber-800 hover:bg-amber-700 text-white py-2 px-6 rounded-full text-sm transition duration-300">Añadir al carrito</button>
+                    </div>
+                    
+                    <div class="perfume-bottle flex-shrink-0 w-64 mx-4 bg-gray-50 p-6 rounded-xl shadow-md snap-start text-center">
+                        <div class="h-48 flex items-center justify-center mb-4">
+                            <img src="img/CR7.jpg" alt="Perfume 2" class="h-full">
+                        </div>
+                        <h3 class="title-font text-xl font-semibold mb-2">CR7</h3>
+                        <p class="text-gray-600 text-sm mb-4">Notas: Bergamota, Neroli, Jazmín</p>
+                        <span class="block text-amber-800 text-lg font-bold mb-4">$190.000</span>
+                        <button class="bg-amber-800 hover:bg-amber-700 text-white py-2 px-6 rounded-full text-sm transition duration-300">Añadir al carrito</button>
+                    </div>
+                    
+                    <div class="perfume-bottle flex-shrink-0 w-64 mx-4 bg-gray-50 p-6 rounded-xl shadow-md snap-start text-center">
+                        <div class="h-48 flex items-center justify-center mb-4">
+                            <img src="img/212VIP.jpg" alt="Perfume 3" class="h-full">
+                        </div>
+                        <h3 class="title-font text-xl font-semibold mb-2">Amber Whisper</h3>
+                        <p class="text-gray-600 text-sm mb-4">Notas: Ámbar, Vainilla, Pachulí</p>
+                        <span class="block text-amber-800 text-lg font-bold mb-4">$169.900</span>
+                        <button class="bg-amber-800 hover:bg-amber-700 text-white py-2 px-6 rounded-full text-sm transition duration-300">Añadir al carrito</button>
+                    </div>
+                    
+                    <div class="perfume-bottle flex-shrink-0 w-64 mx-4 bg-gray-50 p-6 rounded-xl shadow-md snap-start text-center">
+                        <div class="h-48 flex items-center justify-center mb-4">
+                            <img src="img/LEGEND.webp" alt="Perfume 4" class="h-full">
+                        </div>
+                        <h3 class="title-font text-xl font-semibold mb-2"> LEGEND</h3>
+                        <p class="text-gray-600 text-sm mb-4">Notas: Algas marinas, Salvia, Mandarin</p>
+                        <span class="block text-amber-800 text-lg font-bold mb-4">$90.000</span>
+                        <button class="bg-amber-800 hover:bg-amber-700 text-white py-2 px-6 rounded-full text-sm transition duration-300">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- fin -->
+ <!-- explorar por marca -->
+    <section id="perfumes" class="py-16 bg-gray-50 ,contenido">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-gray-800">Explora por familia olfativa</h2>
+                <div class="w-20 h-1 bg-amber-800 mx-auto mt-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Descubre perfumes que se adaptan a tu estilo y personalidad</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="scent-card relative overflow-hidden rounded-xl shadow-md h-64">
+                    <img src="img/florales.jpg" alt="Floral" class="w-full h-full object-cover">
+                    <div class="scent-overlay absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center p-6 text-white">
+                        <i class="fas fa-spa text-4xl mb-4"></i>
+                        <h3 class="title-font text-2xl font-bold mb-2">Floral</h3>
+                        <p class="text-center mb-4">Fragancias suaves y románticas basadas en flores</p>
+                        <button class="border border-white text-white py-2 px-6 rounded-full hover:bg-white hover:text-gray-800 transition duration-300">Ver colección</button>
+                    </div>
+                </div>
+                
+                <div class="scent-card relative overflow-hidden rounded-xl shadow-md h-64">
+                    <img src="img/oriental.jpg" alt="Oriental" class="w-full h-full object-cover">
+                    <div class="scent-overlay absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center p-6 text-white">
+                        <i class="fas fa-gem text-4xl mb-4"></i>
+                        <h3 class="title-font text-2xl font-bold mb-2">Oriental</h3>
+                        <p class="text-center mb-4">Fragancias cálidas y especiadas con toques exóticos</p>
+                        <button class="border border-white text-white py-2 px-6 rounded-full hover:bg-white hover:text-gray-800 transition duration-300">Ver colección</button>
+                    </div>
+                </div>
+                
+                <div class="scent-card relative overflow-hidden rounded-xl shadow-md h-64">
+                    <img src="img/amaderado.jpg" alt="Fresh" class="w-full h-full object-cover">
+                    <div class="scent-overlay absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center p-6 text-white">
+                        <i class="fas fa-wind text-4xl mb-4"></i>
+                        <h3 class="title-font text-2xl font-bold mb-2">Amaderado</h3>
+                        <p class="text-center mb-4">Fragancias ligeras y energizantes ideales para el día</p>
+                        <button class="border border-white text-white py-2 px-6 rounded-full hover:bg-white hover:text-gray-800 transition duration-300">Ver colección</button>
+                    </div>
+                </div>
+                
+                <div class="scent-card relative overflow-hidden rounded-xl shadow-md h-64">
+                    <img src="img/avuatico.jpg" alt="Woody" class="w-full h-full object-cover">
+                    <div class="scent-overlay absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center p-6 text-white">
+                        <i class="fas fa-tree text-4xl mb-4"></i>
+                        <h3 class="title-font text-2xl font-bold mb-2">acuatico</h3>
+                        <p class="text-center mb-4">Fragancias profundas y envolventes con toques terrosos</p>
+                        <button class="border border-white text-white py-2 px-6 rounded-full hover:bg-white hover:text-gray-800 transition duration-300">Ver colección</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- marcas de perfumes -->
+    <section id="brands" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-gray-800">Explora por familia de marcas</h2>
+                <div class="w-20 h-1 bg-amber-800 mx-auto mt-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Trabajamos con las mejores casas perfumistas del mundo</p>
+            </div>
+           
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center">
+                <div class="flex items-center justify-center p-4">
+                    <img src="img/descarga.png" alt="Chanel" class="h-12 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Dior_logo.svg/2560px-Dior_logo.svg.png" alt="Cristiano Ronaldo" class="h-8 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="img/lacoste.png" alt="Lacoste" class="h-8 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Louis_Vuitton_logo_and_wordmark.svg/2560px-Louis_Vuitton_logo_and_wordmark.svg.png" alt="Louis Vuitton" class="h-8 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Gucci_logo.svg/2560px-Gucci_logo.svg.png" alt="Gucci" class="h-6 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Creed_Boutique_logo.svg/2560px-Creed_Boutique_logo.svg.png" alt="Creed" class="h-8 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Jo_Malone_London_logo.svg/1200px-Jo_Malone_London_logo.svg.png" alt="Jo Malone" class="h-8 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Byredo_logo.svg/2560px-Byredo_logo.svg.png" alt="Byredo" class="h-6 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Penhaligons_Logo.svg/2560px-Penhaligons_Logo.svg.png" alt="Penhaligon's" class="h-8 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Serge_Lutens_logo.svg/2560px-Serge_Lutens_logo.svg.png" alt="Serge Lutens" class="h-6 object-contain opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- fin -->
+ <!-- comentarios -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-gray-800">Lo que dicen nuestros clientes</h2>
+                <div class="w-20 h-1 bg-amber-800 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-700 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Destacando la Experiencia General
+                    ¡Absolutamente encantado con la experiencia en [Nombre de la página/tienda]! Desde la amplia selección de fragancias que se adapta a todos los gustos, hasta la facilidad de navegación en la página, todo está diseñado para hacer que encontrar tu perfume ideal sea un placer. La descripción detallada de cada aroma y las sugerencias de uso son increíblemente útiles. Además, el envío fue rápido y el empaque impecable, asegurando que mi perfume llegara en perfectas condiciones. ¡Definitivamente mi nuevo lugar favorito para comprar perfumes!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-800">María G.</h4>
+                            <p class="text-gray-600 text-sm">Clienta desde 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-700 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"¡Qué grata sorpresa encontrar [Nombre de la página/tienda]! La calidad de los perfumes es insuperable; cada fragancia que he probado es auténtica y tiene una excelente fijación. Quiero destacar también el excepcional servicio al cliente: resolvieron mis dudas rápidamente y con gran amabilidad. El proceso de compra fue muy intuitivo y la entrega, ¡más rápida de lo esperado! Se nota el cuidado y la pasión por ofrecer lo mejor. ¡Totalmente recomendable para los amantes de los buenos perfumes"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carla M.</h4>
+                            <p class="text-gray-600 text-sm">Clienta desde 2021</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-700 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"¡Increíble la variedad de perfumes que ofrece [Nombre de la página/tienda]! Siempre encuentro algo nuevo y emocionante para probar. Lo que más valoro es lo bien organizada que está la página, con filtros y categorías que realmente te ayudan a descubrir fragancias según tu estado de ánimo o la ocasión. Las reseñas de otros usuarios y las recomendaciones personalizadas son un plus enorme. Recibí mi pedido perfectamente embalado y en tiempo récord. ¡Una tienda online imprescindible para cualquier entusiasta de la perfumería!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Daniel R.</h4>
+                            <p class="text-gray-600 text-sm">Cliente desde 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- fin -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80" alt="Essencia Perfumería" class="rounded-xl shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="title-font text-3xl md:text-4xl font-bold text-gray-800 mb-6">Nuestra historia</h2>
+                    <div class="w-20 h-1 bg-amber-800 mb-6"></div>
+                    <p class="text-gray-600 mb-4">Hace seis años, el deseo de emprender nos llevó a fundar [Nombre de tu Negocio], un espacio dedicado al arte de la perfumería</p>
+                    <p class="text-gray-600 mb-6">Desde nuestros humildes comienzos, hemos crecido y evolucionado gracias a la confianza de nuestros clientes, expandiendo nuestra presencia a tres sucursales en el departamento de Cesar: Santana, Astrea y Chiriguaná. Cada una de ellas es un reflejo de nuestro compromiso con la excelencia y nuestra visión de acercar las mejores fragancias a tu vida.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-gray-50 px-4 py-2 rounded-lg">
+                            <i class="fas fa-check-circle text-amber-800 mr-2"></i>
+                            <span class="text-gray-700">+6 años de experiencia</span>
+                        </div>
+                        <div class="flex items-center bg-gray-50 px-4 py-2 rounded-lg">
+                            <i class="fas fa-check-circle text-amber-800 mr-2"></i>
+                            <span class="text-gray-700">+500 fragancias exclusivas</span>
+                        </div>
+                        <div class="flex items-center bg-gray-50 px-4 py-2 rounded-lg">
+                            <i class="fas fa-check-circle text-amber-800 mr-2"></i>
+                            <span class="text-gray-700">Sucursales 3 en el país</span>
+                        </div>
+                        <div class="flex items-center bg-gray-50 px-4 py-2 rounded-lg">
+                            <i class="fas fa-check-circle text-amber-800 mr-2"></i>
+                            <span class="text-gray-700">venta y recargas de perfumes</span>
+                        </div>
+                    </div>
+                    <button class="mt-8 bg-amber-800 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300">Conoce más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- contactanos -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">Contacta con nosotros</h2>
+                <div class="w-20 h-1 bg-amber-800 mx-auto mb-4"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto">¿Tienes preguntas sobre nuestros productos o necesitas asesoramiento personalizado? Escríbenos y te responderemos en menos de 24 horas.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-gray-300 mb-2">Nombre completo</label>
+                        <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-800">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-300 mb-2">Correo electrónico</label>
+                        <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-800">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-300 mb-2">Teléfono (opcional)</label>
+                        <input type="tel" id="phone" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-800">
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-gray-300 mb-2">Asunto</label>
+                        <select id="subject" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-800">
+                            <option value="">Selecciona un tema</option>
+                            <option value="question">Consulta sobre productos</option>
+                            <option value="advice">Asesoramiento personalizado</option>
+                            <option value="order">Pregunta sobre mi pedido</option>
+                            <option value="other">Otro asunto</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="message" class="block text-gray-300 mb-2">Mensaje</label>
+                        <textarea id="message" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-800"></textarea>
+                    </div>
+                    <div class="md:col-span-2 flex justify-center">
+                        <button type="submit" class="bg-amber-800 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300">Enviar mensaje</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-amber-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">Suscríbete a nuestro boletín</h2>
+            <p class="text-amber-100 max-w-2xl mx-auto mb-8">Recibe las últimas novedades, ofertas exclusivas y consejos sobre fragancias directamente en tu correo.</p>
+            
+            <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Tu correo electrónico" class="flex-grow bg-white bg-opacity-20 border border-amber-200 rounded-lg py-3 px-4 text-white placeholder-amber-100 focus:outline-none focus:ring-2 focus:ring-white">
+                <button class="bg-white text-amber-800 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300">Suscribirse</button>
+            </div>
+            
+            <p class="text-amber-100 text-sm mt-4">Nos tomamos en serio tu privacidad. Nunca compartiremos tu información.</p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="title-font text-xl font-bold text-white mb-4">ESSENCIA</h3>
+                    <p class="mb-4">Perfumería de lujo con las fragancias más exclusivas del mundo.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray4 00 hover:text-amber-800"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-800"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-800"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-800"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Menú</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-amber-800 transition duration-300">Inicio</a></li>
+                        <li><a href="#perfumes" class="hover:text-amber-800 transition duration-300">Perfumes</a></li>
+                        <li><a href="#brands" class="hover:text-amber-800 transition duration-300">Marcas</a></li>
+                        <li><a href="#about" class="hover:text-amber-800 transition duration-300">Nosotros</a></li>
+                        <li><a href="#contact" class="hover:text-amber-800 transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Tienda</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-amber-800 transition duration-300">Hombre</a></li>
+                        <li><a href="#" class="hover:text-amber-800 transition duration-300">Mujer</a></li>
+                        <li><a href="#" class="hover:text-amber-800 transition duration-300">Unisex</a></li>
+                        <li><a href="#" class="hover:text-amber-800 transition duration-300">Ediciones limitadas</a></li>
+                        <li><a href="#" class="hover:text-amber-800 transition duration-300">Ofertas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-amber-800 mt-1 mr-3"></i>
+                            <span>Calle Perfume, 123<br>28001 Madrid, España</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-amber-800 mr-3"></i>
+                            <span>+34 910 123 456</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-amber-800 mr-3"></i>
+                            <span>info@essencia.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
