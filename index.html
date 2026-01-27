@@ -6,19 +6,16 @@
     <title>PERFUMSHOP | Perfumería de Lujo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="florales.css">
-    <link rel="stylesheet" href="hola.css">
-    <link rel="stylesheet" href="ingre.css">
+    <link rel="stylesheet" href="/assets/style/estilos.css  ">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-800">
+    <body class="bg-white text-gray-800">
     <!-- Header y navegación -->
     <header class="fixed w-full bg-white shadow-sm z-50 border-b border-gray-100">
         <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="#" class="logo-principal text-xl sm:text-2xl font-bold text-black">PERFUMSHOP</a>
-                <div class="ml-1 sm:ml-2 text-xs text-dorado font-medium tracking-widest hidden sm:block">PERFUMERÍA</div>
             </div>
             
             <!-- Navegación desktop -->
@@ -35,10 +32,6 @@
                     Marcas
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a href="http://127.0.0.1:5501/ingre.html" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
-                    Agregar
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
-                </a>
                 <a href="#about" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
                     Nosotros
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
@@ -50,10 +43,7 @@
             </nav>
             
             <div class="flex items-center space-x-4 sm:space-x-6">
-                <a href="#" class="text-gray-700 hover:text-dorado transition duration-300 hidden sm:inline-block">
-                    <i class="fas fa-search"></i>
-                </a>
-                <a href="#" class="text-gray-700 hover:text-dorado transition duration-300 hidden sm:inline-block">
+                <a href="http://127.0.0.1:3000/login.html" class="text-gray-700 hover:text-dorado transition duration-300 hidden sm:inline-block">
                     <i class="fas fa-user"></i>
                 </a>
                 <a href="#" class="text-gray-700 hover:text-dorado transition duration-300 relative">
@@ -77,9 +67,6 @@
                 </a>
                 <a href="#brands" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
                     <i class="fas fa-copyright mr-3 text-dorado"></i> Marcas
-                </a>
-                <a href="http://127.0.0.1:5501/ingre.html" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
-                    <i class="fas fa-plus-circle mr-3 text-dorado"></i> Agregar
                 </a>
                 <a href="#about" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
                     <i class="fas fa-store mr-3 text-dorado"></i> Nosotros
@@ -107,98 +94,11 @@
             <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto text-gray-200 px-2">
                 Descubre la esencia del lujo en nuestra exclusiva colección de perfumes que capturan momentos, emociones y la verdadera naturaleza del estilo.
             </p>
-            <a href="http://127.0.0.1:5501/perfu.html" class="inline-block">
+            <a href="#perfumes" class="inline-block">
                 <button class="btn-dorado py-3 px-6 sm:py-4 sm:px-10 text-sm sm:text-base md:text-lg font-semibold">
                     <span>Explorar colección</span>
                 </button>
             </a>
-        </div>
-    </section>
-
-    <!-- Sección Productos Destacados -->
-    <section class="py-12 sm:py-16 md:py-20 bg-white">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="text-center mb-10 sm:mb-12 md:mb-16 fade-in">
-                <h2 class="font-titulo text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">COLECCIÓN EXCLUSIVA</h2>
-                <div class="separador-dorado mx-auto mb-4 sm:mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2">
-                    Descubre nuestra selección de fragancias premium, creadas con los ingredientes más finos para aquellos que buscan lo extraordinario.
-                </p>
-            </div>
-            
-            <div class="relative">
-                <div class="carousel">
-                    <!-- Producto 1 -->
-                    <div class="carousel-item">
-                        <div class="perfume-bottle bg-white p-4 sm:p-6 md:p-8 text-center relative">
-                            <div class="h-40 sm:h-48 md:h-56 flex items-center justify-center mb-4 sm:mb-6">
-                                <img src="img/PUREX XS.avif" alt="PURE XS" class="h-full object-contain max-w-full">
-                            </div>
-                            <h3 class="font-titulo text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-black">PURE XS</h3>
-                            <p class="text-gray-500 text-xs sm:text-sm mb-3 sm:mb-4 tracking-wide">NOTAS: SÁNDALO, VAINILLA, ROSA</p>
-                            <span class="block text-dorado text-xl sm:text-2xl font-bold mb-4 sm:mb-6">$80.000</span>
-                            <button class="btn-dorado-relleno w-full py-2 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm font-semibold">
-                                AÑADIR AL CARRITO
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Producto 2 -->
-                    <div class="carousel-item">
-                        <div class="perfume-bottle bg-white p-4 sm:p-6 md:p-8 text-center relative">
-                            <div class="h-40 sm:h-48 md:h-56 flex items-center justify-center mb-4 sm:mb-6">
-                                <img src="img/CR7.jpg" alt="CR7" class="h-full object-contain max-w-full">
-                            </div>
-                            <h3 class="font-titulo text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-black">CR7</h3>
-                            <p class="text-gray-500 text-xs sm:text-sm mb-3 sm:mb-4 tracking-wide">NOTAS: BERGAMOTA, NEROLI, JAZMÍN</p>
-                            <span class="block text-dorado text-xl sm:text-2xl font-bold mb-4 sm:mb-6">$190.000</span>
-                            <button class="btn-dorado-relleno w-full py-2 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm font-semibold">
-                                AÑADIR AL CARRITO
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Producto 3 -->
-                    <div class="carousel-item">
-                        <div class="perfume-bottle bg-white p-4 sm:p-6 md:p-8 text-center relative">
-                            <div class="h-40 sm:h-48 md:h-56 flex items-center justify-center mb-4 sm:mb-6">
-                                <img src="img/212VIP.jpg" alt="212 VIP" class="h-full object-contain max-w-full">
-                            </div>
-                            <h3 class="font-titulo text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-black">212 VIP</h3>
-                            <p class="text-gray-500 text-xs sm:text-sm mb-3 sm:mb-4 tracking-wide">NOTAS: ÁMBAR, VAINILLA, PACHULÍ</p>
-                            <span class="block text-dorado text-xl sm:text-2xl font-bold mb-4 sm:mb-6">$169.900</span>
-                            <button class="btn-dorado-relleno w-full py-2 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm font-semibold">
-                                AÑADIR AL CARRITO
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Producto 4 -->
-                    <div class="carousel-item">
-                        <div class="perfume-bottle bg-white p-4 sm:p-6 md:p-8 text-center relative">
-                            <div class="h-40 sm:h-48 md:h-56 flex items-center justify-center mb-4 sm:mb-6">
-                                <img src="img/LEGEND.webp" alt="LEGEND" class="h-full object-contain max-w-full">
-                            </div>
-                            <h3 class="font-titulo text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-black">LEGEND</h3>
-                            <p class="text-gray-500 text-xs sm:text-sm mb-3 sm:mb-4 tracking-wide">NOTAS: ALGAS MARINAS, SALVIA, MANDARIN</p>
-                            <span class="block text-dorado text-xl sm:text-2xl font-bold mb-4 sm:mb-6">$90.000</span>
-                            <button class="btn-dorado-relleno w-full py-2 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm font-semibold">
-                                AÑADIR AL CARRITO
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Indicadores de carrusel para móviles -->
-                <div class="flex justify-center mt-6 lg:hidden">
-                    <div class="flex space-x-2">
-                        <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
-                        <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
-                        <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
-                        <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -216,27 +116,27 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                 <!-- Card Floral -->
                 <div class="scent-card relative overflow-hidden">
-                    <img src="img/florales.jpg" alt="Floral" class="w-full h-full object-cover">
+                    <img src="/assets/img/oso perfume.png"alt="Hombres" class="w-full h-full object-cover">
                     <div class="scent-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 text-white">
                         <i class="fas fa-spa text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 text-dorado"></i>
-                        <h3 class="font-titulo text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">FLORAL</h3>
+                        <h3 class="font-titulo text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Caballero</h3>
                         <p class="text-center mb-4 sm:mb-6 text-gray-200 text-sm sm:text-base">
-                            Fragancias suaves y románticas basadas en flores
+                            Fragancias para cavalleros 
                         </p>
                         <button class="btn-dorado py-2 sm:py-3 px-4 sm:px-6 md:px-8 text-xs sm:text-sm font-semibold">
-                            <span>VER COLECCIÓN</span>
+                         <a href=""> <span>VER COLECCIÓN</span> </a>
                         </button>
                     </div>
                 </div>
-                
+             
                 <!-- Card Oriental -->
                 <div class="scent-card relative overflow-hidden">
-                    <img src="img/oriental.jpg" alt="Oriental" class="w-full h-full object-cover">
+                    <img src="/assets/img/florales1.jpg" alt="mugeres" class="w-full h-full object-cover">
                     <div class="scent-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 text-white">
                         <i class="fas fa-gem text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 text-dorado"></i>
-                        <h3 class="font-titulo text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">ORIENTAL</h3>
+                        <h3 class="font-titulo text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Damas</h3>
                         <p class="text-center mb-4 sm:mb-6 text-gray-200 text-sm sm:text-base">
-                            Fragancias cálidas y especiadas con toques exóticos
+                            Fragancias de cálidas para la mujer moderna
                         </p>
                         <button class="btn-dorado py-2 sm:py-3 px-4 sm:px-6 md:px-8 text-xs sm:text-sm font-semibold">
                             <span>VER COLECCIÓN</span>
@@ -246,12 +146,12 @@
                 
                 <!-- Card Amaderado -->
                 <div class="scent-card relative overflow-hidden">
-                    <img src="img/amaderado.jpg" alt="Amaderado" class="w-full h-full object-cover">
+                    <img src="/assets/img/niños y niñas.png" alt="niños y niñas" class="w-full h-full object-cover">
                     <div class="scent-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 text-white">
                         <i class="fas fa-tree text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 text-dorado"></i>
-                        <h3 class="font-titulo text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">AMADERADO</h3>
+                        <h3 class="font-titulo text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Niños y niñas</h3>
                         <p class="text-center mb-4 sm:mb-6 text-gray-200 text-sm sm:text-base">
-                            Fragancias profundas y envolventes con toques terrosos
+                            Fragancias profundas y para los más pequeños
                         </p>
                         <button class="btn-dorado py-2 sm:py-3 px-4 sm:px-6 md:px-8 text-xs sm:text-sm font-semibold">
                             <span>VER COLECCIÓN</span>
@@ -261,12 +161,12 @@
                 
                 <!-- Card Acuático -->
                 <div class="scent-card relative overflow-hidden">
-                    <img src="img/avuatico.jpg" alt="Acuático" class="w-full h-full object-cover">
+                    <img src="/assets/img/mixto.webp" alt="Acuático" class="w-full h-full object-cover">
                     <div class="scent-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 text-white">
                         <i class="fas fa-water text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 text-dorado"></i>
-                        <h3 class="font-titulo text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">ACUÁTICO</h3>
+                        <h3 class="font-titulo text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Mixtos</h3>
                         <p class="text-center mb-4 sm:mb-6 text-gray-200 text-sm sm:text-base">
-                            Fragancias ligeras y energizantes ideales para el día
+                            Fragancias ligeras y energizantes para todos
                         </p>
                         <button class="btn-dorado py-2 sm:py-3 px-4 sm:px-6 md:px-8 text-xs sm:text-sm font-semibold">
                             <span>VER COLECCIÓN</span>
@@ -319,6 +219,109 @@
                 <div class="flex items-center justify-center p-3 sm:p-4">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Serge_Lutens_logo.svg/2560px-Serge_Lutens_logo.svg.png" alt="Serge Lutens" class="h-5 sm:h-6 object-contain opacity-80 hover:opacity-100 transition duration-300">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Productos Destacados -->
+    <section class="py-12 sm:py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 sm:mb-12 md:mb-16 fade-in">
+                <h2 class="font-titulo text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">COLECCIÓN EXCLUSIVA</h2>
+                <div class="separador-dorado mx-auto mb-4 sm:mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2">
+                    Descubre nuestra selección de fragancias premium, creadas con los ingredientes más finos para aquellos que buscan lo extraordinario.
+                </p>
+            </div>
+            
+            <div class="relative carousel-wrapper">
+                <!-- Botón anterior -->
+                <button id="prevBtn" class="carousel-btn carousel-btn-prev hidden lg:flex">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <!-- Carrusel mejorado -->
+                <div class="carousel relative overflow-hidden" id="carouselProducts">
+                    <div class="carousel-inner flex transition-transform duration-500 ease-in-out" id="carouselInner">
+                        <!-- Producto 1 -->
+                        <div class="carousel-item w-full flex-shrink-0 px-2 md:px-3" data-index="0">
+                            <div class="perfume-bottle bg-white p-4 sm:p-6 md:p-8 text-center relative h-full">
+                                <div class="h-48 sm:h-56 md:h-64 flex items-center justify-center mb-6">
+                                    <img src="/assets/img/CR7.jpg" alt="PURE XS" class="h-full object-contain max-w-full transform hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <h3 class="font-titulo text-2xl sm:text-3xl font-semibold mb-3 text-black">PURE XS</h3>
+                                <p class="text-gray-500 text-sm sm:text-base mb-4 tracking-wide uppercase">NOTAS: SÁNDALO, VAINILLA, ROSA</p>
+                                <span class="block text-dorado text-2xl sm:text-3xl font-bold mb-6">$80.000</span>
+                                <button class="btn-dorado-relleno w-full py-3 px-6 text-sm sm:text-base font-semibold hover:scale-105 transition-transform duration-300">
+                                    AÑADIR AL CARRITO
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Producto 2 -->
+                        <div class="carousel-item w-full flex-shrink-0 px-2 md:px-3" data-index="1">
+                            <div class="perfume-bottle bg-white p-4 sm:p-6 md:p-8 text-center relative h-full">
+                                <div class="h-48 sm:h-56 md:h-64 flex items-center justify-center mb-6">
+                                    <img src="img/CR7.jpg" alt="CR7" class="h-full object-contain max-w-full transform hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <h3 class="font-titulo text-2xl sm:text-3xl font-semibold mb-3 text-black">CR7</h3>
+                                <p class="text-gray-500 text-sm sm:text-base mb-4 tracking-wide uppercase">NOTAS: BERGAMOTA, NEROLI, JAZMÍN</p>
+                                <span class="block text-dorado text-2xl sm:text-3xl font-bold mb-6">$190.000</span>
+                                <button class="btn-dorado-relleno w-full py-3 px-6 text-sm sm:text-base font-semibold hover:scale-105 transition-transform duration-300">
+                                    AÑADIR AL CARRITO
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Producto 3 -->
+                        <div class="carousel-item w-full flex-shrink-0 px-2 md:px-3" data-index="2">
+                            <div class="perfume-bottle bg-white p-4 sm:p-6 md:p-8 text-center relative h-full">
+                                <div class="h-48 sm:h-56 md:h-64 flex items-center justify-center mb-6">
+                                    <img src="img/212VIP.jpg" alt="212 VIP" class="h-full object-contain max-w-full transform hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <h3 class="font-titulo text-2xl sm:text-3xl font-semibold mb-3 text-black">212 VIP</h3>
+                                <p class="text-gray-500 text-sm sm:text-base mb-4 tracking-wide uppercase">NOTAS: ÁMBAR, VAINILLA, PACHULÍ</p>
+                                <span class="block text-dorado text-2xl sm:text-3xl font-bold mb-6">$169.900</span>
+                                <button class="btn-dorado-relleno w-full py-3 px-6 text-sm sm:text-base font-semibold hover:scale-105 transition-transform duration-300">
+                                    AÑADIR AL CARRITO
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Producto 4 -->
+                        <div class="carousel-item w-full flex-shrink-0 px-2 md:px-3" data-index="3">
+                            <div class="perfume-bottle bg-white p-4 sm:p-6 md:p-8 text-center relative h-full">
+                                <div class="h-48 sm:h-56 md:h-64 flex items-center justify-center mb-6">
+                                    <img src="img/LEGEND.webp" alt="LEGEND" class="h-full object-contain max-w-full transform hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <h3 class="font-titulo text-2xl sm:text-3xl font-semibold mb-3 text-black">LEGEND</h3>
+                                <p class="text-gray-500 text-sm sm:text-base mb-4 tracking-wide uppercase">NOTAS: ALGAS MARINAS, SALVIA, MANDARIN</p>
+                                <span class="block text-dorado text-2xl sm:text-3xl font-bold mb-6">$90.000</span>
+                                <button class="btn-dorado-relleno w-full py-3 px-6 text-sm sm:text-base font-semibold hover:scale-105 transition-transform duration-300">
+                                    AÑADIR AL CARRITO
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botón siguiente -->
+                <button id="nextBtn" class="carousel-btn carousel-btn-next hidden lg:flex">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Indicadores de carrusel mejorados -->
+                <div class="flex justify-center mt-8 lg:mt-10" id="carouselIndicators">
+                    <div class="flex space-x-3">
+                        <button class="carousel-indicator w-3 h-3 bg-gray-300 rounded-full cursor-pointer transition-all duration-300 active" data-index="0"></button>
+                        <button class="carousel-indicator w-3 h-3 bg-gray-300 rounded-full cursor-pointer transition-all duration-300" data-index="1"></button>
+                        <button class="carousel-indicator w-3 h-3 bg-gray-300 rounded-full cursor-pointer transition-all duration-300" data-index="2"></button>
+                        <button class="carousel-indicator w-3 h-3 bg-gray-300 rounded-full cursor-pointer transition-all duration-300" data-index="3"></button>
+                    </div>
+                </div>
+                
+                <!-- Controles de reproducción automática -->
+    
             </div>
         </div>
     </section>
@@ -443,81 +446,93 @@
                         </div>
                     </div>
                     
-                    <button class="btn-dorado py-3 px-6 sm:py-4 sm:px-10 text-sm sm:text-base md:text-lg font-semibold">
-                        <span>CONOCE MÁS</span>
-                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Contacto -->
-    <section id="contact" class="py-12 sm:py-16 md:py-20 bg-black text-white">
+    <section id="contact" class="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-10 sm:mb-12 md:mb-16 fade-in">
-                <h2 class="font-titulo text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">CONTACTA CON NOSOTROS</h2>
+                <h2 class="font-titulo text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">CONTÁCTANOS</h2>
                 <div class="separador-dorado mx-auto mb-4 sm:mb-6"></div>
-                <p class="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2">
-                    ¿Tienes preguntas sobre nuestros productos o necesitas asesoramiento personalizado? Escríbenos y te responderemos en menos de 24 horas.
+                <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2">
+                    ¿Tienes preguntas? ¿Necesitas asesoramiento para encontrar tu fragancia perfecta? Estamos aquí para ayudarte.
                 </p>
             </div>
             
-            <div class="max-w-4xl mx-auto">
-                <form class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                    <div>
-                        <label for="name" class="block text-gray-300 mb-2 sm:mb-3 font-medium text-sm sm:text-base">NOMBRE COMPLETO</label>
-                        <input type="text" id="name" class="w-full bg-gray-900 border border-gray-700 rounded-none py-3 sm:py-4 px-4 sm:px-5 text-white focus:outline-none focus:border-dorado transition duration-300 text-sm sm:text-base">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-gray-300 mb-2 sm:mb-3 font-medium text-sm sm:text-base">CORREO ELECTRÓNICO</label>
-                        <input type="email" id="email" class="w-full bg-gray-900 border border-gray-700 rounded-none py-3 sm:py-4 px-4 sm:px-5 text-white focus:outline-none focus:border-dorado transition duration-300 text-sm sm:text-base">
-                    </div>
-                    <div>
-                        <label for="phone" class="block text-gray-300 mb-2 sm:mb-3 font-medium text-sm sm:text-base">TELÉFONO (OPCIONAL)</label>
-                        <input type="tel" id="phone" class="w-full bg-gray-900 border border-gray-700 rounded-none py-3 sm:py-4 px-4 sm:px-5 text-white focus:outline-none focus:border-dorado transition duration-300 text-sm sm:text-base">
-                    </div>
-                    <div>
-                        <label for="subject" class="block text-gray-300 mb-2 sm:mb-3 font-medium text-sm sm:text-base">ASUNTO</label>
-                        <select id="subject" class="w-full bg-gray-900 border border-gray-700 rounded-none py-3 sm:py-4 px-4 sm:px-5 text-white focus:outline-none focus:border-dorado transition duration-300 text-sm sm:text-base">
-                            <option value="">SELECCIONA UN TEMA</option>
-                            <option value="question">Consulta sobre productos</option>
-                            <option value="advice">Asesoramiento personalizado</option>
-                            <option value="order">Pregunta sobre mi pedido</option>
-                            <option value="other">Otro asunto</option>
-                        </select>
-                    </div>
-                    <div class="md:col-span-2">
-                        <label for="message" class="block text-gray-300 mb-2 sm:mb-3 font-medium text-sm sm:text-base">MENSAJE</label>
-                        <textarea id="message" rows="5" class="w-full bg-gray-900 border border-gray-700 rounded-none py-3 sm:py-4 px-4 sm:px-5 text-white focus:outline-none focus:border-dorado transition duration-300 text-sm sm:text-base"></textarea>
-                    </div>
-                    <div class="md:col-span-2 flex justify-center">
-                        <button type="submit" class="btn-dorado-relleno py-3 px-8 sm:py-4 sm:px-12 text-sm sm:text-base md:text-lg font-semibold w-full sm:w-auto">
+            <div class="flex flex-col lg:flex-row gap-8 sm:gap-12">
+                <div class="lg:w-1/2 fade-in">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            <div>
+                                <label for="nombre" class="block text-gray-700 mb-2 font-medium">Nombre completo</label>
+                                <input type="text" id="nombre" class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-dorado focus:ring-2 focus:ring-dorado/20 transition duration-300">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2 font-medium">Correo electrónico</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-dorado focus:ring-2 focus:ring-dorado/20 transition duration-300">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="asunto" class="block text-gray-700 mb-2 font-medium">Asunto</label>
+                            <input type="text" id="asunto" class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-dorado focus:ring-2 focus:ring-dorado/20 transition duration-300">
+                        </div>
+                        <div>
+                            <label for="mensaje" class="block text-gray-700 mb-2 font-medium">Mensaje</label>
+                            <textarea id="mensaje" rows="5" class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-dorado focus:ring-2 focus:ring-dorado/20 transition duration-300"></textarea>
+                        </div>
+                        <button type="submit" class="btn-dorado-relleno py-3 px-8 font-semibold text-sm sm:text-base">
                             ENVIAR MENSAJE
                         </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2 fade-in">
+                    <div class="bg-white p-6 sm:p-8 shadow-sm border border-gray-100">
+                        <h3 class="font-titulo text-xl sm:text-2xl font-bold mb-6 text-black">INFORMACIÓN DE CONTACTO</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-gray-50 p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt text-dorado text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black mb-1">DIRECCIÓN</h4>
+                                    <p class="text-gray-600">Calle Perfume, 123<br>28001 Madrid, España</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gray-50 p-3 mr-4">
+                                    <i class="fas fa-phone-alt text-dorado text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black mb-1">TELÉFONO</h4>
+                                    <p class="text-gray-600">+34 910 123 456</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gray-50 p-3 mr-4">
+                                    <i class="fas fa-envelope text-dorado text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black mb-1">EMAIL</h4>
+                                    <p class="text-gray-600">info@perfunshop.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gray-50 p-3 mr-4">
+                                    <i class="fas fa-clock text-dorado text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black mb-1">HORARIO DE ATENCIÓN</h4>
+                                    <p class="text-gray-600">Lunes a Viernes: 9:00 - 21:00<br>Sábados: 10:00 - 14:00</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Sección Newsletter -->
-    <section class="py-12 sm:py-16 md:py-20 bg-dorado text-black">
-        <div class="container mx-auto px-4 sm:px-6 text-center">
-            <h2 class="font-titulo text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">SUSCRÍBETE A NUESTRO BOLETÍN</h2>
-            <p class="text-black max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10 text-sm sm:text-base md:text-lg opacity-90 px-2">
-                Recibe las últimas novedades, ofertas exclusivas y consejos sobre fragancias directamente en tu correo.
-            </p>
-            
-            <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <input type="email" placeholder="TU CORREO ELECTRÓNICO" class="flex-grow bg-white border border-black rounded-none py-3 sm:py-4 px-4 sm:px-6 text-black placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-black text-sm sm:text-base">
-                <button class="bg-black text-white hover:bg-gray-900 font-semibold py-3 sm:py-4 px-6 sm:px-10 rounded-none transition duration-300 text-sm sm:text-base w-full sm:w-auto mt-2 sm:mt-0">
-                    SUSCRIBIRSE
-                </button>
-            </div>
-            
-            <p class="text-black text-xs sm:text-sm mt-4 sm:mt-6 opacity-80">
-                Nos tomamos en serio tu privacidad. Nunca compartiremos tu información.
-            </p>
         </div>
     </section>
 
@@ -531,8 +546,8 @@
                         Perfumería de lujo con las fragancias más exclusivas del mundo. Que tu fragancia inspire.
                     </p>
                     <div class="flex space-x-4 sm:space-x-5">
-                        <a href="#" class="text-gray-400 hover:text-dorado transition duration-300 text-lg sm:text-xl"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-dorado transition duration-300 text-lg sm:text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61572535898476" class="text-gray-400 hover:text-dorado transition duration-300 text-lg sm:text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/perfumshop_2025?igsh=em02aDdmemxjeDNl" class="text-gray-400 hover:text-dorado transition duration-300 text-lg sm:text-xl"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-gray-400 hover:text-dorado transition duration-300 text-lg sm:text-xl"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="text-gray-400 hover:text-dorado transition duration-300 text-lg sm:text-xl"><i class="fab fa-pinterest-p"></i></a>
                     </div>
@@ -558,19 +573,14 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">CONTACTO</h4>
                     <ul class="space-y-3 sm:space-y-4">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt text-dorado mt-1 mr-3 sm:mr-4 text-sm sm:text-base"></i>
-                            <span class="text-sm sm:text-base">Calle Perfume, 123<br>28001 Madrid, España</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt text-dorado mr-3 sm:mr-4 text-sm sm:text-base"></i>
-                            <span class="text-sm sm:text-base">+34 910 123 456</span>
+                            <a href="" class="text-sm sm:text-base">Políticas de Privacidad</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope text-dorado mr-3 sm:mr-4 text-sm sm:text-base"></i>
-                            <span class="text-sm sm:text-base">info@perfunshop.com</span>
+                            <a href="" class="text-sm sm:text-base">Términos y Condiciones</a>
                         </li>
                     </ul>
                 </div>
@@ -581,6 +591,6 @@
             </div>
         </div>
     </footer>
- <script src="jscrip.js"></script>
+   <script src="/assets/js/jscrip.js"></script>
 </body>
 </html>

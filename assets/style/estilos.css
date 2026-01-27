@@ -1,4 +1,4 @@
- /* Estilos personalizados para complementar Tailwind */
+        /* Estilos personalizados para complementar Tailwind */
         :root {
             --color-negro: #0a0a0a;
             --color-blanco: #ffffff;
@@ -26,7 +26,7 @@
         
         /* Hero section responsivo */
         .hero-section {
-            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.8)), url('https://images.unsplash.com/photo-1543858741-2f4073edf06c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.8)), url('/assets/img/logo.jpeg');
             background-size: cover;
             background-position: center;
             min-height: 85vh;
@@ -56,19 +56,18 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(212, 175, 55, 0.1);
             width: 100%;
-            max-width: 300px;
             margin: 0 auto;
+            animation: fadeInUp 0.6s ease-out;
         }
         
-        @media (min-width: 640px) {
-            .perfume-bottle {
-                width: 280px;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-        }
-        
-        @media (min-width: 1024px) {
-            .perfume-bottle {
-                width: 300px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
         
@@ -94,47 +93,99 @@
             transform: scaleX(1);
         }
         
-        /* Carousel responsive */
+        /* Carrusel mejorado */
         .carousel {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        
+        .carousel-inner {
             display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE and Edge */
-            padding: 20px 10px;
-            gap: 20px;
-        }
-        
-        .carousel::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
-        }
-        
-        @media (min-width: 1024px) {
-            .carousel {
-                justify-content: center;
-                overflow-x: visible;
-                flex-wrap: wrap;
-                gap: 30px;
-            }
+            transition: transform 0.6s ease-in-out;
         }
         
         .carousel-item {
-            flex: 0 0 auto;
-            scroll-snap-align: start;
-            width: 280px;
+            flex: 0 0 100%;
+            min-width: 0;
         }
         
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
             .carousel-item {
-                width: 280px;
+                flex: 0 0 50%;
             }
         }
         
         @media (min-width: 1024px) {
             .carousel-item {
-                width: 300px;
+                flex: 0 0 33.333%;
             }
+        }
+        
+        @media (min-width: 1280px) {
+            .carousel-item {
+                flex: 0 0 25%;
+            }
+        }
+        
+        /* Botones del carrusel mejorados */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(212, 175, 55, 0.9);
+            color: var(--color-negro);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            opacity: 0.8;
+        }
+        
+        .carousel-btn:hover {
+            background-color: var(--color-dorado);
+            transform: translateY(-50%) scale(1.1);
+            opacity: 1;
+        }
+        
+        .carousel-btn-prev {
+            left: 10px;
+        }
+        
+        .carousel-btn-next {
+            right: 10px;
+        }
+        
+        /* Indicadores del carrusel mejorados */
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #d1d5db;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+        
+        .carousel-indicator:hover {
+            background-color: var(--color-dorado);
+            transform: scale(1.2);
+        }
+        
+        .carousel-indicator.active {
+            background-color: var(--color-dorado);
+            width: 32px;
+            border-radius: 10px;
+            border-color: var(--color-dorado);
         }
         
         /* Scent cards responsive */
@@ -226,6 +277,7 @@
         .btn-dorado-relleno:hover {
             background-color: var(--color-dorado-oscuro);
             border-color: var(--color-dorado-oscuro);
+            transform: scale(1.05);
         }
         
         /* Separador dorado */
@@ -348,4 +400,21 @@
             .footer-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
+        }
+        
+        /* Precio con efecto especial */
+        .perfume-bottle .text-dorado {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .perfume-bottle .text-dorado::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-dorado), transparent);
         }
