@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Mixtos | PERFUMSHOP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/style/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header y navegación -->
+    <header class="fixed w-full bg-white shadow-sm z-50 border-b border-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="logo-principal text-xl sm:text-2xl font-bold text-black">PERFUMSHOP</a>
+            </div>
+            
+            <!-- Navegación desktop -->
+            <nav class="hidden lg:flex space-x-6 xl:space-x-10">
+                <a href="index.html#inicio" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Inicio
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="index.html#perfumes" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Perfumes
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="caballero.html" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Caballero
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="damas.html" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Damas
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="mixto.html" class="text-dorado font-medium relative group text-sm xl:text-base">
+                    Mixtos
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-dorado"></span>
+                </a>
+            </nav>
+            
+            <div class="flex items-center space-x-4 sm:space-x-6">
+                <a href="login.html" class="text-gray-700 hover:text-dorado transition duration-300 hidden sm:inline-block">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-dorado transition duration-300 relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-2 -right-2 bg-dorado text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+                <button id="menuMovilBtn" class="lg:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menú móvil -->
+        <div id="menuMovil" class="lg:hidden hidden bg-white py-4 px-6 shadow-lg border-t border-gray-100">
+            <div class="flex flex-col space-y-1">
+                <a href="index.html#inicio" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-home mr-3 text-dorado"></i> Inicio
+                </a>
+                <a href="caballero.html" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-wine-bottle mr-3 text-dorado"></i> Caballero
+                </a>
+                <a href="damas.html" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-gem mr-3 text-dorado"></i> Damas
+                </a>
+                <a href="mixto.html" class="py-3 text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-heart mr-3 text-dorado"></i> Mixtos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Hero Mixtos -->
+    <section class="hero-mixto flex items-center justify-center text-white pt-20 md:pt-24 relative" style="background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.8)), linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%); min-height: 85vh;">
+        <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+            <div class="mb-6 sm:mb-8">
+                <i class="fas fa-heart text-5xl sm:text-6xl md:text-7xl text-dorado mb-4 sm:mb-6"></i>
+            </div>
+            <h1 class="font-titulo text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">PERFUMES <span class="text-dorado">MIXTOS</span></h1>
+            <p class="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-3xl mx-auto text-gray-200 px-2">
+                Aromas versátiles que se adaptan a cualquier momento. Fragancias únicas que celebran la diversidad y el romance sin límites.
+            </p>
+            <div class="separador-dorado mx-auto mb-8 sm:mb-10"></div>
+            <a href="#coleccion" class="inline-block">
+                <button class="btn-dorado py-3 px-6 sm:py-4 sm:px-10 text-sm sm:text-base md:text-lg font-semibold">
+                    <span>Descubre la Colección</span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Características de los Mixtos -->
+    <section class="py-12 sm:py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 sm:mb-12 md:mb-16">
+                <h2 class="font-titulo text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6">¿POR QUÉ ELEGIR PERFUMES MIXTOS?</h2>
+                <div class="separador-dorado mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-6 sm:p-8 md:p-10 text-center hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                    <div class="mb-4 sm:mb-6">
+                        <i class="fas fa-balance-scale text-4xl sm:text-5xl text-dorado"></i>
+                    </div>
+                    <h3 class="font-titulo text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">Perfectamente Balanceados</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Combinan lo mejor de ambas familias olfativas para crear aromas armoniosos y sofisticados.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-6 sm:p-8 md:p-10 text-center hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                    <div class="mb-4 sm:mb-6">
+                        <i class="fas fa-heart text-4xl sm:text-5xl text-dorado"></i>
+                    </div>
+                    <h3 class="font-titulo text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">Para Todos</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Diseñados para hombres y mujeres que aman experimentar y no quieren limitarse a una categoría.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-6 sm:p-8 md:p-10 text-center hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                    <div class="mb-4 sm:mb-6">
+                        <i class="fas fa-sparkles text-4xl sm:text-5xl text-dorado"></i>
+                    </div>
+                    <h3 class="font-titulo text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">Versátiles</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Perfectos para cualquier ocasión, desde el día a día hasta eventos especiales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colección Mixtos -->
+    <section id="coleccion" class="py-12 sm:py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 sm:mb-12 md:mb-16">
+                <h2 class="font-titulo text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6">COLECCIÓN MIXTOS</h2>
+                <div class="separador-dorado mx-auto mb-4 sm:mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
+                    Una selección cuidada de fragancias diseñadas para quienes valoran la versatilidad y la sofisticación.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+                <!-- Perfume Card 1 -->
+                <div class="perfume-bottle group bg-white overflow-hidden relative cursor-pointer">
+                    <div class="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                        <img src="/assets/img/florales1.jpg" alt="Aroma Mixto 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-dorado text-black px-6 py-3 font-semibold rounded hover:bg-yellow-600 transition-colors">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-bold text-black mb-2">Equilibrio</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2">Aroma fresco y floral</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-dorado font-bold text-lg sm:text-xl">$89.99</span>
+                            <i class="fas fa-heart text-gray-300 hover:text-dorado transition-colors cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfume Card 2 -->
+                <div class="perfume-bottle group bg-white overflow-hidden relative cursor-pointer">
+                    <div class="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                        <img src="/assets/img/oso perfume.png" alt="Aroma Mixto 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-dorado text-black px-6 py-3 font-semibold rounded hover:bg-yellow-600 transition-colors">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-bold text-black mb-2">Serenidad</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2">Aroma cálido y sensual</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-dorado font-bold text-lg sm:text-xl">$95.99</span>
+                            <i class="fas fa-heart text-gray-300 hover:text-dorado transition-colors cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfume Card 3 -->
+                <div class="perfume-bottle group bg-white overflow-hidden relative cursor-pointer">
+                    <div class="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                        <img src="/assets/img/florales1.jpg" alt="Aroma Mixto 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-dorado text-black px-6 py-3 font-semibold rounded hover:bg-yellow-600 transition-colors">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-bold text-black mb-2">Armonía</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2">Aroma frutal y sofisticado</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-dorado font-bold text-lg sm:text-xl">$92.99</span>
+                            <i class="fas fa-heart text-gray-300 hover:text-dorado transition-colors cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfume Card 4 -->
+                <div class="perfume-bottle group bg-white overflow-hidden relative cursor-pointer">
+                    <div class="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                        <img src="/assets/img/oso perfume.png" alt="Aroma Mixto 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-dorado text-black px-6 py-3 font-semibold rounded hover:bg-yellow-600 transition-colors">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-bold text-black mb-2">Esencia Única</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2">Aroma ambarado y floral</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-dorado font-bold text-lg sm:text-xl">$98.99</span>
+                            <i class="fas fa-heart text-gray-300 hover:text-dorado transition-colors cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfume Card 5 -->
+                <div class="perfume-bottle group bg-white overflow-hidden relative cursor-pointer">
+                    <div class="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                        <img src="/assets/img/florales1.jpg" alt="Aroma Mixto 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-dorado text-black px-6 py-3 font-semibold rounded hover:bg-yellow-600 transition-colors">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-bold text-black mb-2">Romanticismo</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2">Aroma oriental y sensual</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-dorado font-bold text-lg sm:text-xl">$88.99</span>
+                            <i class="fas fa-heart text-gray-300 hover:text-dorado transition-colors cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfume Card 6 -->
+                <div class="perfume-bottle group bg-white overflow-hidden relative cursor-pointer">
+                    <div class="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                        <img src="/assets/img/oso perfume.png" alt="Aroma Mixto 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-dorado text-black px-6 py-3 font-semibold rounded hover:bg-yellow-600 transition-colors">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-bold text-black mb-2">Encuentro</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2">Aroma cítrico y ambarado</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-dorado font-bold text-lg sm:text-xl">$91.99</span>
+                            <i class="fas fa-heart text-gray-300 hover:text-dorado transition-colors cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfume Card 7 -->
+                <div class="perfume-bottle group bg-white overflow-hidden relative cursor-pointer">
+                    <div class="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                        <img src="/assets/img/florales1.jpg" alt="Aroma Mixto 7" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-dorado text-black px-6 py-3 font-semibold rounded hover:bg-yellow-600 transition-colors">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-bold text-black mb-2">Pasión</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2">Aroma especiado y floral</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-dorado font-bold text-lg sm:text-xl">$94.99</span>
+                            <i class="fas fa-heart text-gray-300 hover:text-dorado transition-colors cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfume Card 8 -->
+                <div class="perfume-bottle group bg-white overflow-hidden relative cursor-pointer">
+                    <div class="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
+                        <img src="/assets/img/oso perfume.png" alt="Aroma Mixto 8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-dorado text-black px-6 py-3 font-semibold rounded hover:bg-yellow-600 transition-colors">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-bold text-black mb-2">Conexión</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2">Aroma verde y ambarado</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-dorado font-bold text-lg sm:text-xl">$90.99</span>
+                            <i class="fas fa-heart text-gray-300 hover:text-dorado transition-colors cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 sm:py-16 md:py-20 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="font-titulo text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">¿NECESITAS AYUDA PARA ELEGIR?</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto mb-6 sm:mb-8 text-sm sm:text-base md:text-lg px-2">
+                Nuestro equipo de expertos está disponible para recomendarte el perfume mixto perfecto para ti.
+            </p>
+            <a href="#contact">
+                <button class="btn-dorado py-3 px-6 sm:py-4 sm:px-10 text-sm sm:text-base md:text-lg font-semibold">
+                    <span>Contáctanos</span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-10 sm:py-12 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
+                <div>
+                    <h4 class="font-titulo text-white font-bold mb-4 sm:mb-6 text-lg">PERFUMSHOP</h4>
+                    <p class="text-sm text-gray-500 mb-4">
+                        Tu tienda de perfumes de lujo con las mejores fragancias del mundo.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-dorado hover:text-yellow-600 transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-dorado hover:text-yellow-600 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-dorado hover:text-yellow-600 transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-titulo text-white font-bold mb-4 sm:mb-6 text-lg">NAVEGACIÓN</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-dorado transition">Inicio</a></li>
+                        <li><a href="caballero.html" class="hover:text-dorado transition">Caballero</a></li>
+                        <li><a href="damas.html" class="hover:text-dorado transition">Damas</a></li>
+                        <li><a href="mixto.html" class="hover:text-dorado transition">Mixtos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-titulo text-white font-bold mb-4 sm:mb-6 text-lg">INFORMACIÓN</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="terminos_condiciones.html" class="hover:text-dorado transition">Términos y Condiciones</a></li>
+                        <li><a href="politicas_de_segurdad.html" class="hover:text-dorado transition">Políticas de Seguridad</a></li>
+                        <li><a href="#" class="hover:text-dorado transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-titulo text-white font-bold mb-4 sm:mb-6 text-lg">CONTACTO</h4>
+                    <p class="text-sm mb-2">
+                        <i class="fas fa-phone text-dorado mr-2"></i> +1 (555) 123-4567
+                    </p>
+                    <p class="text-sm mb-2">
+                        <i class="fas fa-envelope text-dorado mr-2"></i> info@perfumshop.com
+                    </p>
+                    <p class="text-sm">
+                        <i class="fas fa-map-marker-alt text-dorado mr-2"></i> Calle Principal 123, Ciudad
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 sm:pt-10 text-center text-sm text-gray-500">
+                <p>&copy; 2024 PERFUMSHOP. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para menú móvil -->
+    <script>
+        const menuMovilBtn = document.getElementById('menuMovilBtn');
+        const menuMovil = document.getElementById('menuMovil');
+
+        menuMovilBtn.addEventListener('click', () => {
+            menuMovil.classList.toggle('hidden');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('#menuMovil a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuMovil.classList.add('hidden');
+            });
+        });
+
+        // Efecto de corazón en los perfumes
+        document.querySelectorAll('.fa-heart').forEach(heart => {
+            heart.addEventListener('click', (e) => {
+                e.preventDefault();
+                heart.classList.toggle('fas');
+                heart.classList.toggle('far');
+                if (heart.classList.contains('fas')) {
+                    heart.classList.add('text-dorado');
+                } else {
+                    heart.classList.remove('text-dorado');
+                    heart.classList.add('text-gray-300');
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .text-dorado {
+            color: #d4af37;
+        }
+
+        .bg-dorado {
+            background-color: #d4af37;
+        }
+
+        .btn-dorado {
+            background-color: #d4af37;
+            color: #0a0a0a;
+            transition: all 0.3s ease;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+        }
+
+        .btn-dorado:hover {
+            background-color: transparent;
+            color: #d4af37;
+        }
+
+        .separador-dorado {
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+        }
+
+        .perfume-bottle {
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .perfume-bottle:hover {
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .feature-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</body>
+</html>

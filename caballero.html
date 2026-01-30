@@ -3,1106 +3,585 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfumes para Hombre - PERFUMSHOP | Perfumería de Lujo</title>
+    <title>Perfumes para Caballeros | PERFUMSHOP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="/assets/style/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-dorado: #d4af37;
-            --color-dorado-oscuro: #b8941f;
-            --color-negro: #0a0a0a;
-            --color-gris: #2a2a2a;
-            --color-gris-claro: #f5f5f5;
-        }
-
-        body {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        h1, h2, h3, .font-titulo {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .header-caballero {
-            background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=1548&q=80');
-            background-size: cover;
-            background-position: center;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            position: relative;
-            text-align: center;
-        }
-
-        .header-caballero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, transparent 60%, rgba(212, 175, 55, 0.15) 100%);
-            pointer-events: none;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 10;
-            max-width: 800px;
-        }
-
-        .btn-dorado {
-            background-color: var(--color-dorado);
-            color: var(--color-negro);
-            border: none;
-            border-radius: 6px;
-            padding: 12px 24px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .btn-dorado:hover {
-            background-color: var(--color-dorado-oscuro);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
-        }
-
-        .filtros-container {
-            background: white;
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .filtros-titulo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            color: var(--color-negro);
-            margin-bottom: 20px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .filtros-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .filtro-grupo {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .filtro-grupo label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            color: var(--color-gris);
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .filtro-grupo label:hover {
-            color: var(--color-dorado);
-        }
-
-        .filtro-grupo input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-            accent-color: var(--color-dorado);
-        }
-
-        .filtro-grupo input[type="range"] {
-            width: 100%;
-            accent-color: var(--color-dorado);
-        }
-
-        .precio-display {
-            color: var(--color-dorado);
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .productos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .producto-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-top: 3px solid var(--color-dorado);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .producto-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
-        }
-
-        .producto-imagen {
-            height: 320px;
-            background: linear-gradient(135deg, var(--color-gris-claro) 0%, #efefef 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .producto-imagen img {
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .producto-card:hover .producto-imagen img {
-            transform: scale(1.05);
-        }
-
-        .badge-descuento {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--color-dorado);
-            color: var(--color-negro);
-            padding: 8px 12px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .producto-info {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .producto-marca {
-            color: var(--color-dorado);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .producto-nombre {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            color: var(--color-negro);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .producto-descripcion {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-            flex-grow: 1;
-            line-height: 1.5;
-        }
-
-        .producto-familia {
-            display: inline-block;
-            background: var(--color-gris-claro);
-            color: var(--color-gris);
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-        }
-
-        .producto-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid var(--color-gris-claro);
-        }
-
-        .producto-precio {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .precio-original {
-            color: #999;
-            text-decoration: line-through;
-            font-size: 0.9rem;
-        }
-
-        .precio-actual {
-            color: var(--color-dorado);
-            font-size: 1.4rem;
-            font-weight: 700;
-        }
-
-        .btn-agregar {
-            background: var(--color-dorado);
-            color: var(--color-negro);
-            border: none;
-            padding: 10px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-agregar:hover {
-            background: var(--color-dorado-oscuro);
-            transform: scale(1.05);
-        }
-
-        .comparador-btn {
-            background: transparent;
-            border: 1px solid var(--color-dorado);
-            color: var(--color-dorado);
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.85rem;
-        }
-
-        .comparador-btn:hover {
-            background: var(--color-dorado);
-            color: var(--color-negro);
-        }
-
-        .vista-toggle {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin: 30px 0;
-        }
-
-        .vista-toggle button {
-            padding: 10px 16px;
-            border: 2px solid var(--color-dorado);
-            background: white;
-            color: var(--color-dorado);
-            cursor: pointer;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .vista-toggle button.active {
-            background: var(--color-dorado);
-            color: var(--color-negro);
-        }
-
-        .productos-por-pagina {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            align-items: center;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-
-        .productos-por-pagina select {
-            padding: 8px 12px;
-            border: 1px solid var(--color-dorado);
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-
-        .pagination a, .pagination span {
-            padding: 10px 14px;
-            border: 1px solid var(--color-dorado);
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: var(--color-negro);
-        }
-
-        .pagination a:hover {
-            background: var(--color-dorado);
-            color: white;
-        }
-
-        .pagination span.active {
-            background: var(--color-dorado);
-            color: var(--color-negro);
-            border-color: var(--color-dorado);
-        }
-
-        @media (max-width: 768px) {
-            .header-caballero {
-                min-height: 40vh;
-            }
-
-            .filtros-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .productos-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 20px;
-            }
-        }
-
-        /* Estilos del Buscador */
-        .buscador-container {
-            margin: 40px 0;
-            position: relative;
-        }
-
-        .buscador-wrapper {
-            position: relative;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .buscador-icon {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--color-dorado);
-            font-size: 1.2rem;
-            pointer-events: none;
-        }
-
-        .buscador-input {
-            width: 100%;
-            padding: 16px 50px 16px 45px;
-            border: 2px solid var(--color-dorado);
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-family: 'Cormorant Garamond', serif;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.1);
-        }
-
-        .buscador-input:focus {
-            outline: none;
-            border-color: var(--color-dorado-oscuro);
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
-        }
-
-        .buscador-input::placeholder {
-            color: #999;
-        }
-
-        .buscador-limpiar {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--color-dorado);
-            color: var(--color-negro);
-            border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .buscador-limpiar:hover {
-            background: var(--color-dorado-oscuro);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .buscador-sugerencias {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            border: 1px solid var(--color-gris-claro);
-            border-top: none;
-            border-radius: 0 0 8px 8px;
-            max-height: 400px;
-            overflow-y: auto;
-            z-index: 100;
-            display: none;
-        }
-
-        .buscador-sugerencias.activo {
-            display: block;
-        }
-
-        .sugerencia-item {
-            padding: 12px 16px;
-            border-bottom: 1px solid var(--color-gris-claro);
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .sugerencia-item:hover {
-            background: var(--color-gris-claro);
-            color: var(--color-dorado);
-        }
-
-        .sugerencia-item:last-child {
-            border-bottom: none;
-        }
-
-        .sugerencia-marca {
-            color: var(--color-dorado);
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .sugerencia-nombre {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-        }
-
-        .sin-resultados {
-            text-align: center;
-            padding: 60px 20px;
-            color: #999;
-        }
-
-        .sin-resultados i {
-            font-size: 3rem;
-            color: var(--color-gris-claro);
-            margin-bottom: 20px;
-        }
-
-        .sin-resultados-titulo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
-<body class="bg-white">
-    <!-- Hero Section -->
-    <section class="header-caballero mt-16 sm:mt-20">
-        <div class="header-content">
-            <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 20px;">PERFUMES PARA <span style="color: #d4af37;">CABALLERO</span></h1>
-            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #ddd;">Fragancias que reflejan tu virilidad, elegancia y sofisticación</p>
-            <a href="#productos" style="text-decoration: none;">
-                <button class="btn-dorado" style="padding: 14px 32px; font-size: 1.1rem;">
-                    <i class="fas fa-arrow-down mr-2"></i>Ver Colección
+<body class="bg-white text-gray-800">
+    <!-- Header y navegación -->
+    <header class="fixed w-full bg-white shadow-sm z-50 border-b border-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="logo-principal text-xl sm:text-2xl font-bold text-black">PERFUMSHOP</a>
+            </div>
+            
+            <!-- Navegación desktop -->
+            <nav class="hidden lg:flex space-x-6 xl:space-x-10">
+                <a href="index.html" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Inicio
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="damas.html" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Damas
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="caballero.html" class="text-dorado font-medium relative group text-sm xl:text-base">
+                    Caballeros
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-dorado transition-all duration-300"></span>
+                </a>
+                <a href="index.html#brands" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Marcas
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Contacto
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </nav>
+            
+            <div class="flex items-center space-x-4 sm:space-x-6">
+                <a href="login.html" class="text-gray-700 hover:text-dorado transition duration-300 hidden sm:inline-block">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-dorado transition duration-300 relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-2 -right-2 bg-dorado text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+                <button id="menuMovilBtn" class="lg:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
                 </button>
-            </a>
+            </div>
+        </div>
+        
+        <!-- Menú móvil -->
+        <div id="menuMovil" class="lg:hidden hidden bg-white py-4 px-6 shadow-lg border-t border-gray-100">
+            <div class="flex flex-col space-y-1">
+                <a href="index.html" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-home mr-3 text-dorado"></i> Inicio
+                </a>
+                <a href="damas.html" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-flower mr-3 text-dorado"></i> Damas
+                </a>
+                <a href="caballero.html" class="py-3 text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-gem mr-3 text-dorado"></i> Caballeros
+                </a>
+                <a href="index.html#brands" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-copyright mr-3 text-dorado"></i> Marcas
+                </a>
+                <a href="index.html#contact" class="py-3 text-gray-700 hover:text-dorado font-medium flex items-center">
+                    <i class="fas fa-phone-alt mr-3 text-dorado"></i> Contacto
+                </a>
+            </div>
+            
+            <div class="mt-6 pt-6 border-t border-gray-100 flex justify-center space-x-6">
+                <a href="#" class="text-gray-700 hover:text-dorado transition duration-300">
+                    <i class="fas fa-search text-lg"></i>
+                </a>
+                <a href="login.html" class="text-gray-700 hover:text-dorado transition duration-300">
+                    <i class="fas fa-user text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section para Caballeros -->
+    <section class="hero-caballeros flex items-center justify-center text-white pt-16 sm:pt-20 md:pt-24 relative" style="background: linear-gradient(rgba(212, 175, 55, 0.2), rgba(10, 10, 10, 0.85)), url('https://images.unsplash.com/photo-1615635694335-e51f1ff1c704?w=1200&h=600&fit=crop'); background-size: cover; background-position: center; min-height: 70vh;">
+        <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+            <h1 class="font-titulo text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">
+                PERFUMES PARA <span class="text-dorado">CABALLEROS</span>
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200 px-2">
+                Descubre fragancias sofisticadas que potencian tu carisma y personalidad. Cada aroma, un reflejo de tu carácter y distinción.
+            </p>
+            <div class="separador-dorado mb-8"></div>
         </div>
     </section>
 
-    <!-- Contenedor Principal -->
-    <div class="container mx-auto px-4 py-8">
-        <!-- Buscador -->
-        <div class="buscador-container">
-            <div class="buscador-wrapper">
-                <i class="fas fa-search buscador-icon"></i>
-                <input 
-                    type="text" 
-                    id="buscador" 
-                    class="buscador-input" 
-                    placeholder="Busca por nombre, marca o familia olfativa..."
-                    onkeyup="filtrarProductos()"
-                >
-                <button class="buscador-limpiar" onclick="limpiarBuscador()" style="display: none;" id="btnLimpiar">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="buscador-sugerencias" id="sugerencias"></div>
-        </div>
+    <!-- Filtros y Búsqueda -->
+    <section class="py-8 sm:py-12 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                <!-- Buscador -->
+                <div class="md:col-span-1">
+                    <div class="relative">
+                        <input type="text" placeholder="Buscar perfume..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-dorado focus:ring-2 focus:ring-dorado focus:ring-opacity-20">
+                        <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                    </div>
+                </div>
 
-        <!-- Controles de Vista -->
-        <div class="vista-toggle">
-            <button class="active" onclick="cambiarVista('grid')">
-                <i class="fas fa-th-large mr-2"></i>Grid
+                <!-- Filtro por tipo -->
+                <div class="md:col-span-1">
+                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-dorado focus:ring-2 focus:ring-dorado focus:ring-opacity-20 bg-white">
+                        <option>Tipo de fragancia</option>
+                        <option>Woody</option>
+                        <option>Aromático</option>
+                        <option>Especiado</option>
+                        <option>Fresco</option>
+                        <option>Ambarino</option>
+                    </select>
+                </div>
+
+                <!-- Filtro por rango de precio -->
+                <div class="md:col-span-1">
+                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-dorado focus:ring-2 focus:ring-dorado focus:ring-opacity-20 bg-white">
+                        <option>Rango de precio</option>
+                        <option>Bajo ($50 - $100)</option>
+                        <option>Medio ($100 - $200)</option>
+                        <option>Premium ($200 - $500)</option>
+                        <option>Lujo ($500+)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Perfumes -->
+    <section class="py-12 sm:py-16 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+                
+                <!-- Tarjeta Perfume 1 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div class="relative h-80 bg-gradient-to-b from-slate-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300" style="background: linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37), linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37); background-size: 40px 40px; background-position: 0 0, 20px 20px;"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-bottle text-dorado text-7xl mb-4 opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-semibold text-black mb-2">Acero Fuerte</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nota woody con cedro y acero</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-dorado text-lg font-bold">$130</span>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star-half-alt text-dorado text-sm"></i>
+                            </div>
+                        </div>
+                        <button class="btn-dorado w-full py-2 text-sm font-semibold">
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Perfume 2 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div class="relative h-80 bg-gradient-to-b from-blue-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300" style="background: linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37), linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37); background-size: 40px 40px; background-position: 0 0, 20px 20px;"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-bottle text-blue-600 text-7xl mb-4 opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-semibold text-black mb-2">Océano Azul</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nota fresca marina y cítrica</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-dorado text-lg font-bold">$115</span>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                            </div>
+                        </div>
+                        <button class="btn-dorado w-full py-2 text-sm font-semibold">
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Perfume 3 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div class="relative h-80 bg-gradient-to-b from-amber-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300" style="background: linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37), linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37); background-size: 40px 40px; background-position: 0 0, 20px 20px;"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-bottle text-amber-600 text-7xl mb-4 opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-semibold text-black mb-2">Ámbar Clásico</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nota ambarino con vainilla</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-dorado text-lg font-bold">$140</span>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star-half-alt text-dorado text-sm"></i>
+                            </div>
+                        </div>
+                        <button class="btn-dorado w-full py-2 text-sm font-semibold">
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Perfume 4 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div class="relative h-80 bg-gradient-to-b from-gray-900 to-gray-700 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300" style="background: linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37), linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37); background-size: 40px 40px; background-position: 0 0, 20px 20px;"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-bottle text-gray-400 text-7xl mb-4 opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-semibold text-black mb-2">Humo Negro</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nota especiada con tabaco</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-dorado text-lg font-bold">$150</span>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                            </div>
+                        </div>
+                        <button class="btn-dorado w-full py-2 text-sm font-semibold">
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Perfume 5 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div class="relative h-80 bg-gradient-to-b from-green-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300" style="background: linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37), linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37); background-size: 40px 40px; background-position: 0 0, 20px 20px;"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-bottle text-green-700 text-7xl mb-4 opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-semibold text-black mb-2">Bosque Profundo</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nota woody con musgo y pino</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-dorado text-lg font-bold">$135</span>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star-half-alt text-dorado text-sm"></i>
+                            </div>
+                        </div>
+                        <button class="btn-dorado w-full py-2 text-sm font-semibold">
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Perfume 6 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div class="relative h-80 bg-gradient-to-b from-red-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300" style="background: linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37), linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37); background-size: 40px 40px; background-position: 0 0, 20px 20px;"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-bottle text-red-600 text-7xl mb-4 opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-semibold text-black mb-2">Pasión de Fuego</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nota especiada y aromática</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-dorado text-lg font-bold">$125</span>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-gray-300 text-sm"></i>
+                            </div>
+                        </div>
+                        <button class="btn-dorado w-full py-2 text-sm font-semibold">
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Perfume 7 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div class="relative h-80 bg-gradient-to-b from-yellow-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300" style="background: linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37), linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37); background-size: 40px 40px; background-position: 0 0, 20px 20px;"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-bottle text-yellow-600 text-7xl mb-4 opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-semibold text-black mb-2">Cítrico Vigoroso</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nota cítrica con bergamota</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-dorado text-lg font-bold">$100</span>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star-half-alt text-dorado text-sm"></i>
+                            </div>
+                        </div>
+                        <button class="btn-dorado w-full py-2 text-sm font-semibold">
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Perfume 8 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div class="relative h-80 bg-gradient-to-b from-purple-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300" style="background: linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37), linear-gradient(45deg, #d4af37 25%, transparent 25%, transparent 75%, #d4af37 75%, #d4af37); background-size: 40px 40px; background-position: 0 0, 20px 20px;"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-bottle text-purple-600 text-7xl mb-4 opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="font-titulo text-lg sm:text-xl font-semibold text-black mb-2">Misterio Nocturno</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nota aromática con iris</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-dorado text-lg font-bold">$145</span>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                                <i class="fas fa-star text-dorado text-sm"></i>
+                            </div>
+                        </div>
+                        <button class="btn-dorado w-full py-2 text-sm font-semibold">
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Características -->
+    <section class="py-12 sm:py-16 md:py-20 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="font-titulo text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                    ¿Por qué elegir nuestros <span class="text-dorado">perfumes?</span>
+                </h2>
+                <div class="separador-dorado mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6 sm:p-8 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-dorado text-4xl sm:text-5xl mb-4">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="font-titulo text-lg sm:text-xl font-semibold mb-3">100% Natural</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Ingredientes naturales de la más alta calidad</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="text-center p-6 sm:p-8 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-dorado text-4xl sm:text-5xl mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="font-titulo text-lg sm:text-xl font-semibold mb-3">Larga duración</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Fragancias que perduran hasta 12 horas</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="text-center p-6 sm:p-8 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-dorado text-4xl sm:text-5xl mb-4">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="font-titulo text-lg sm:text-xl font-semibold mb-3">Premiado</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Reconocido internacionalmente por su excelencia</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="text-center p-6 sm:p-8 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-dorado text-4xl sm:text-5xl mb-4">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="font-titulo text-lg sm:text-xl font-semibold mb-3">Envase Premium</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Presentación elegante lista para regalar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-12 sm:py-16 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="font-titulo text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                    Lo que dicen nuestros <span class="text-dorado">clientes</span>
+                </h2>
+                <div class="separador-dorado mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-card p-6 sm:p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-dorado rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Carlos Mendoza</h4>
+                            <p class="text-gray-600 text-sm">Cliente verificado</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-1 mb-4">
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                    </div>
+                    <p class="text-gray-700">"Acero Fuerte es increíble. Tiene un aroma masculino y duradero. Me ha convertido en mi perfume favorito para el trabajo y eventos especiales."</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card p-6 sm:p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-dorado rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Juan Rodríguez</h4>
+                            <p class="text-gray-600 text-sm">Cliente verificado</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-1 mb-4">
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                    </div>
+                    <p class="text-gray-700">"Océano Azul es perfecto para el día. Fresco y limpio, exactamente lo que buscaba. La calidad es superior y el precio muy justo."</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="testimonial-card p-6 sm:p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-dorado rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Miguel Fernández</h4>
+                            <p class="text-gray-600 text-sm">Cliente verificado</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-1 mb-4">
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star text-dorado text-sm"></i>
+                        <i class="fas fa-star-half-alt text-dorado text-sm"></i>
+                    </div>
+                    <p class="text-gray-700">"Humo Negro es mi perfume para las noches. Sofisticado y misterioso. Definitivamente vuelvo a comprar."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-black to-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="font-titulo text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+                ¿Buscas algo especial?
+            </h2>
+            <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto text-gray-300">
+                Nuestro equipo de expertos puede asesorarte para encontrar la fragancia perfecta que refleje tu personalidad.
+            </p>
+            <button class="btn-dorado py-3 px-8 text-base font-semibold">
+                <span>Asesoría personalizada</span>
             </button>
-            <button onclick="cambiarVista('lista')">
-                <i class="fas fa-list mr-2"></i>Lista
-            </button>
         </div>
-
-        <!-- Ordenamiento y Resultados -->
-        <div class="productos-por-pagina">
-            <label>Ordenar por:</label>
-            <select id="ordenar" onchange="ordenarProductos()">
-                <option value="relevancia">Más relevante</option>
-                <option value="precio-asc">Precio: Menor a Mayor</option>
-                <option value="precio-desc">Precio: Mayor a Menor</option>
-                <option value="valoracion">Mejor valorados</option>
-                <option value="nuevo">Más nuevos</option>
-            </select>
-            <span style="color: #999;" id="conteoResultados">Mostrando 1-12 de 12 productos</span>
-        </div>
-
-        <!-- Grid de Productos -->
-        <div class="productos-grid" id="productos">
-            <!-- Producto 1 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <div class="badge-descuento">-20%</div>
-                    <img src="https://via.placeholder.com/250x300?text=Creed+Aventus" alt="Creed Aventus">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Creed</div>
-                    <div class="producto-nombre">Aventus</div>
-                    <div class="producto-descripcion">Fragancia sofisticada con piña, manzana silvestre y cedro. Perfecto para el caballero moderno.</div>
-                    <span class="producto-familia">Aromático Frutado</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-original">€249,00</span>
-                            <span class="precio-actual">€199,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 2 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <img src="https://via.placeholder.com/250x300?text=Dior+Sauvage" alt="Dior Sauvage">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Christian Dior</div>
-                    <div class="producto-nombre">Sauvage</div>
-                    <div class="producto-descripcion">Clásico atemporal con bergamota fresca y ámbar gris. Elegancia en cada gota.</div>
-                    <span class="producto-familia">Aromático Especiado</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-actual">€165,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <div class="badge-descuento">-15%</div>
-                    <img src="https://via.placeholder.com/250x300?text=Tom+Ford+Noir" alt="Tom Ford Noir">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Tom Ford</div>
-                    <div class="producto-nombre">Noir Extreme</div>
-                    <div class="producto-descripcion">Intenso y sofisticado con cardamomo, café y ébano. Para noches especiales.</div>
-                    <span class="producto-familia">Amaderado Oriental</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-original">€189,00</span>
-                            <span class="precio-actual">€159,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 4 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <img src="https://via.placeholder.com/250x300?text=Versace+Eros" alt="Versace Eros">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Versace</div>
-                    <div class="producto-nombre">Eros</div>
-                    <div class="producto-descripcion">Fresco y viril con menta griega, tomate y ambroxán. La esencia de la pasión.</div>
-                    <span class="producto-familia">Acuático Aromático</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-actual">€98,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 5 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <div class="badge-descuento">-25%</div>
-                    <img src="https://via.placeholder.com/250x300?text=Guerlain+L'Homme" alt="Guerlain L'Homme">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Guerlain</div>
-                    <div class="producto-nombre">L'Homme Intense</div>
-                    <div class="producto-descripcion">Sofisticado con iris, cacao y cedro. Distinción y refinamiento garantizados.</div>
-                    <span class="producto-familia">Amaderado Aromático</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-original">€139,00</span>
-                            <span class="precio-actual">€104,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 6 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <img src="https://via.placeholder.com/250x300?text=Bleu+de+Chanel" alt="Bleu de Chanel">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Chanel</div>
-                    <div class="producto-nombre">Bleu de Chanel</div>
-                    <div class="producto-descripcion">Cítrico amaderado con galbano, sándalo y ámbar. Elegancia atemporal.</div>
-                    <span class="producto-familia">Aromático Amaderado</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-actual">€189,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 7 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <div class="badge-descuento">-10%</div>
-                    <img src="https://via.placeholder.com/250x300?text=Paco+Rabanne+1M" alt="1 Million">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Paco Rabanne</div>
-                    <div class="producto-nombre">1 Million</div>
-                    <div class="producto-descripcion">Amaderado aromático con patchulí y ámbar. Carisma irresistible.</div>
-                    <span class="producto-familia">Amaderado Oriental</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-original">€87,00</span>
-                            <span class="precio-actual">€78,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 8 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <img src="https://via.placeholder.com/250x300?text=Carolina+Herrera+212" alt="212 Men">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Carolina Herrera</div>
-                    <div class="producto-nombre">212 Men</div>
-                    <div class="producto-descripcion">Fresco y dinámico con cedro y pimienta negra. Perfecto para el día.</div>
-                    <span class="producto-familia">Aromático Especiado</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-actual">€72,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 9 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <div class="badge-descuento">-30%</div>
-                    <img src="https://via.placeholder.com/250x300?text=Hugo+Boss+Bottled" alt="Bottled">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Hugo Boss</div>
-                    <div class="producto-nombre">Bottled</div>
-                    <div class="producto-descripcion">Amaderado aromático con almízcares y tonka. Sofisticación garantizada.</div>
-                    <span class="producto-familia">Amaderado Especiado</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-original">€79,00</span>
-                            <span class="precio-actual">€55,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 10 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <img src="https://via.placeholder.com/250x300?text=Armani+Acqua+Di+Gio" alt="Acqua di Gio">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Giorgio Armani</div>
-                    <div class="producto-nombre">Acqua di Gio</div>
-                    <div class="producto-descripcion">Acuático fresco con notas marinas. Ideal para climas cálidos.</div>
-                    <span class="producto-familia">Acuático Aromático</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-actual">€89,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 11 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <div class="badge-descuento">-18%</div>
-                    <img src="https://via.placeholder.com/250x300?text=Jean+Paul+Gaultier" alt="Le Male">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Jean Paul Gaultier</div>
-                    <div class="producto-nombre">Le Male</div>
-                    <div class="producto-descripcion">Oriental especiado con vainilla y tonka. Clásico de culto.</div>
-                    <span class="producto-familia">Oriental Especiado</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-original">€99,00</span>
-                            <span class="precio-actual">€81,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 12 -->
-            <div class="producto-card">
-                <div class="producto-imagen">
-                    <img src="https://via.placeholder.com/250x300?text=Spicebomb" alt="Spicebomb">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-marca">Viktor & Rolf</div>
-                    <div class="producto-nombre">Spicebomb</div>
-                    <div class="producto-descripcion">Especiado aromático con pimienta negra y canela. Explosión de sabor.</div>
-                    <span class="producto-familia">Especiado Aromático</span>
-                    <div class="producto-footer">
-                        <div class="producto-precio">
-                            <span class="precio-actual">€88,00</span>
-                        </div>
-                        <button class="btn-agregar">
-                            <i class="fas fa-shopping-cart mr-1"></i>Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Paginación -->
-        <div class="pagination">
-            <span class="active">1</span>
-            <a href="#productos">2</a>
-            <a href="#productos">3</a>
-            <a href="#productos">4</a>
-            <a href="#productos">Siguiente →</a>
-        </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer style="background: var(--color-negro); color: white; padding: 60px 20px; text-align: center; margin-top: 80px;">
-        <div class="container mx-auto">
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px; color: var(--color-dorado);">PERFUMSHOP</h3>
-            <p style="margin-bottom: 30px; color: #ddd;">Tu tienda de fragancias premium en línea</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 40px; text-align: left;">
+    <footer class="bg-gray-100 border-t border-gray-200 py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Sobre nosotros -->
                 <div>
-                    <h4 style="color: var(--color-dorado); margin-bottom: 15px;">Navegación</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li><a href="index.html" style="color: #ddd; text-decoration: none;">Inicio</a></li>
-                        <li><a href="caballero.html" style="color: #ddd; text-decoration: none;">Para Hombre</a></li>
-                        <li><a href="florales.html" style="color: #ddd; text-decoration: none;">Para Mujer</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="color: var(--color-dorado); margin-bottom: 15px;">Contacto</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li>Email: info@perfumshop.com</li>
-                        <li>Tel: +34 XXX XX XX XX</li>
-                        <li>Dirección: Calle Principal, 123</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="color: var(--color-dorado); margin-bottom: 15px;">Redes Sociales</h4>
-                    <div style="display: flex; gap: 15px; justify-content: center;">
-                        <a href="#" style="color: var(--color-dorado); font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
-                        <a href="#" style="color: var(--color-dorado); font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
-                        <a href="#" style="color: var(--color-dorado); font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                    <h4 class="font-titulo font-bold text-black mb-4">PERFUMSHOP</h4>
+                    <p class="text-gray-700 text-sm mb-4">Tu tienda de perfumes de lujo en línea. Calidad, elegancia y distinción.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-dorado transition-colors">
+                            <i class="fab fa-facebook text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-dorado transition-colors">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-dorado transition-colors">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Enlaces rápidos -->
+                <div>
+                    <h5 class="font-semibold text-black mb-4">Enlaces Rápidos</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-gray-700 hover:text-dorado transition-colors">Inicio</a></li>
+                        <li><a href="damas.html" class="text-gray-700 hover:text-dorado transition-colors">Damas</a></li>
+                        <li><a href="caballero.html" class="text-gray-700 hover:text-dorado transition-colors">Caballeros</a></li>
+                        <li><a href="index.html#about" class="text-gray-700 hover:text-dorado transition-colors">Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categorías -->
+                <div>
+                    <h5 class="font-semibold text-black mb-4">Categorías</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-700 hover:text-dorado transition-colors">Fragancias Woody</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-dorado transition-colors">Fragancias Aromáticas</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-dorado transition-colors">Fragancias Especiadas</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-dorado transition-colors">Sets Premium</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div>
+                    <h5 class="font-semibold text-black mb-4">Contacto</h5>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><i class="fas fa-phone text-dorado mr-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope text-dorado mr-2"></i> info@perfumshop.com</li>
+                        <li><i class="fas fa-map-marker-alt text-dorado mr-2"></i> Calle Principal 123, Ciudad</li>
+                    </ul>
+                </div>
             </div>
-            <div style="border-top: 1px solid #555; padding-top: 20px;">
-                <p style="color: #999;">&copy; 2026 PERFUMSHOP. Todos los derechos reservados.</p>
+
+            <div class="border-t border-gray-300 pt-8 text-center">
+                <p class="text-gray-600 text-sm">
+                    © 2026 PERFUMSHOP. Todos los derechos reservados. | 
+                    <a href="#" class="hover:text-dorado transition-colors">Política de privacidad</a>
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- Script para menú móvil -->
     <script>
-        // Datos de productos para búsqueda
-        const productos = [
-            { id: 1, nombre: "Aventus", marca: "Creed", familia: "Aromático Frutado", precio: 199, preciOrig: 249 },
-            { id: 2, nombre: "Sauvage", marca: "Christian Dior", familia: "Aromático Especiado", precio: 165, preciOrig: 165 },
-            { id: 3, nombre: "Noir Extreme", marca: "Tom Ford", familia: "Amaderado Oriental", precio: 159, preciOrig: 189 },
-            { id: 4, nombre: "Eros", marca: "Versace", familia: "Acuático Aromático", precio: 98, preciOrig: 98 },
-            { id: 5, nombre: "L'Homme Intense", marca: "Guerlain", familia: "Amaderado Aromático", precio: 104, preciOrig: 139 },
-            { id: 6, nombre: "Bleu de Chanel", marca: "Chanel", familia: "Aromático Amaderado", precio: 189, preciOrig: 189 },
-            { id: 7, nombre: "1 Million", marca: "Paco Rabanne", familia: "Amaderado Oriental", precio: 78, preciOrig: 87 },
-            { id: 8, nombre: "212 Men", marca: "Carolina Herrera", familia: "Aromático Especiado", precio: 72, preciOrig: 72 },
-            { id: 9, nombre: "Bottled", marca: "Hugo Boss", familia: "Amaderado Especiado", precio: 55, preciOrig: 79 },
-            { id: 10, nombre: "Acqua di Gio", marca: "Giorgio Armani", familia: "Acuático Aromático", precio: 89, preciOrig: 89 },
-            { id: 11, nombre: "Le Male", marca: "Jean Paul Gaultier", familia: "Oriental Especiado", precio: 81, preciOrig: 99 },
-            { id: 12, nombre: "Spicebomb", marca: "Viktor & Rolf", familia: "Especiado Aromático", precio: 88, preciOrig: 88 }
-        ];
+        const menuMovilBtn = document.getElementById('menuMovilBtn');
+        const menuMovil = document.getElementById('menuMovil');
 
-        let productosFiltrados = [...productos];
-
-        // Función de búsqueda
-        function filtrarProductos() {
-            const buscador = document.getElementById('buscador');
-            const termino = buscador.value.toLowerCase().trim();
-            const btnLimpiar = document.getElementById('btnLimpiar');
-            const sugerencias = document.getElementById('sugerencias');
-
-            // Mostrar/ocultar botón limpiar
-            if (termino.length > 0) {
-                btnLimpiar.style.display = 'flex';
-            } else {
-                btnLimpiar.style.display = 'none';
-            }
-
-            if (termino.length === 0) {
-                productosFiltrados = [...productos];
-                sugerencias.classList.remove('activo');
-                mostrarProductos(productosFiltrados);
-                actualizarConteo();
-                return;
-            }
-
-            // Filtrar productos
-            productosFiltrados = productos.filter(p => 
-                p.nombre.toLowerCase().includes(termino) ||
-                p.marca.toLowerCase().includes(termino) ||
-                p.familia.toLowerCase().includes(termino)
-            );
-
-            // Mostrar sugerencias
-            if (productosFiltrados.length > 0) {
-                mostrarSugerencias(productosFiltrados, termino);
-                sugerencias.classList.add('activo');
-            } else {
-                sugerencias.classList.remove('activo');
-            }
-
-            mostrarProductos(productosFiltrados);
-            actualizarConteo();
-        }
-
-        // Mostrar sugerencias desplegables
-        function mostrarSugerencias(resultados, termino) {
-            const sugerencias = document.getElementById('sugerencias');
-            sugerencias.innerHTML = '';
-
-            const max = Math.min(5, resultados.length);
-            for (let i = 0; i < max; i++) {
-                const prod = resultados[i];
-                const div = document.createElement('div');
-                div.className = 'sugerencia-item';
-                div.innerHTML = `
-                    <div class="sugerencia-nombre">${prod.nombre}</div>
-                    <div class="sugerencia-marca">${prod.marca}</div>
-                `;
-                div.addEventListener('click', () => {
-                    document.getElementById('buscador').value = prod.nombre;
-                    filtrarProductos();
-                });
-                sugerencias.appendChild(div);
-            }
-
-            if (resultados.length > 5) {
-                const div = document.createElement('div');
-                div.className = 'sugerencia-item';
-                div.textContent = `+${resultados.length - 5} más resultados`;
-                sugerencias.appendChild(div);
-            }
-        }
-
-        // Limpiar buscador
-        function limpiarBuscador() {
-            document.getElementById('buscador').value = '';
-            document.getElementById('buscador').focus();
-            document.getElementById('btnLimpiar').style.display = 'none';
-            document.getElementById('sugerencias').classList.remove('activo');
-            productosFiltrados = [...productos];
-            mostrarProductos(productosFiltrados);
-            actualizarConteo();
-        }
-
-        // Mostrar/ocultar productos
-        function mostrarProductos(lista) {
-            const cards = document.querySelectorAll('.producto-card');
-            const idsEnLista = new Set(lista.map(p => p.id));
-
-            cards.forEach((card, index) => {
-                if (idsEnLista.has(index + 1)) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            if (lista.length === 0) {
-                const grid = document.getElementById('productos');
-                if (!document.getElementById('sin-resultados')) {
-                    const div = document.createElement('div');
-                    div.id = 'sin-resultados';
-                    div.className = 'sin-resultados';
-                    div.innerHTML = `
-                        <i class="fas fa-search"></i>
-                        <div class="sin-resultados-titulo">No se encontraron resultados</div>
-                        <p>Intenta con otros términos de búsqueda</p>
-                    `;
-                    grid.parentElement.insertBefore(div, grid);
-                }
-            } else {
-                const sinResultados = document.getElementById('sin-resultados');
-                if (sinResultados) {
-                    sinResultados.remove();
-                }
-            }
-        }
-
-        // Actualizar conteo de resultados
-        function actualizarConteo() {
-            const total = productosFiltrados.length;
-            const conteo = document.getElementById('conteoResultados');
-            if (total === 0) {
-                conteo.textContent = '0 productos encontrados';
-            } else {
-                conteo.textContent = `Mostrando 1-${Math.min(12, total)} de ${total} productos`;
-            }
-        }
-
-        // Ordenar productos
-        function ordenarProductos() {
-            const orden = document.getElementById('ordenar').value;
-            let productosCopia = [...productosFiltrados];
-
-            switch(orden) {
-                case 'precio-asc':
-                    productosCopia.sort((a, b) => a.precio - b.precio);
-                    break;
-                case 'precio-desc':
-                    productosCopia.sort((a, b) => b.precio - a.precio);
-                    break;
-                case 'nuevo':
-                    productosCopia.sort((a, b) => b.id - a.id);
-                    break;
-                case 'relevancia':
-                default:
-                    productosCopia = [...productosFiltrados];
-            }
-
-            mostrarProductosOrdenados(productosCopia);
-        }
-
-        // Mostrar productos ordenados
-        function mostrarProductosOrdenados(lista) {
-            const cards = document.querySelectorAll('.producto-card');
-            const idsEnLista = new Set(lista.map(p => p.id));
-
-            cards.forEach((card, index) => {
-                if (idsEnLista.has(index + 1)) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Cambiar vista
-        function cambiarVista(tipo) {
-            const grid = document.getElementById('productos');
-            document.querySelectorAll('.vista-toggle button').forEach(btn => btn.classList.remove('active'));
-            event.target.closest('button').classList.add('active');
-            
-            if (tipo === 'lista') {
-                grid.style.gridTemplateColumns = '1fr';
-            } else {
-                grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(280px, 1fr))';
-            }
-        }
-
-        // Agregar al carrito
-        document.querySelectorAll('.btn-agregar').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const productName = this.closest('.producto-card').querySelector('.producto-nombre').textContent;
-                alert(`${productName} agregado al carrito!`);
-            });
+        menuMovilBtn.addEventListener('click', () => {
+            menuMovil.classList.toggle('hidden');
         });
 
-        // Cerrar sugerencias al hacer clic afuera
-        document.addEventListener('click', function(e) {
-            const buscador = document.getElementById('buscador');
-            const sugerencias = document.getElementById('sugerencias');
-            
-            if (!e.target.closest('.buscador-wrapper')) {
-                sugerencias.classList.remove('activo');
-            }
-        });
-
-        // Permitir navegación con teclado en sugerencias
-        document.getElementById('buscador').addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                limpiarBuscador();
-            }
+        // Cerrar menú al hacer clic en un enlace
+        const menuLinks = menuMovil.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuMovil.classList.add('hidden');
+            });
         });
     </script>
 </body>
