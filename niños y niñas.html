@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes para Niños y Niñas | PERFUMSHOP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/style/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header y navegación -->
+    <header class="fixed w-full bg-white shadow-sm z-50 border-b border-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="logo-principal text-xl sm:text-2xl font-bold text-black">PERFUMSHOP</a>
+            </div>
+            
+            <!-- Navegación desktop -->
+            <nav class="hidden lg:flex space-x-6 xl:space-x-10">
+                <a href="index.html" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Inicio
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="damas.html" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Damas
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="caballero.html" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Caballeros
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="niños y niñas.html" class="text-dorado font-medium relative group text-sm xl:text-base">
+                    Niños y Niñas
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-dorado transition-all duration-300"></span>
+                </a>
+                <a href="index.html#brands" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Marcas
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-dorado font-medium relative group text-sm xl:text-base">
+                    Contacto
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dorado group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </nav>
+            
+            <div class="flex items-center space-x-4 sm:space-x-6">
+                <a href="login.html" class="text-gray-700 hover:text-dorado transition duration-300 hidden sm:inline-block">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-dorado transition duration-300 relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="carrito-contador absolute -top-2 -right-2 bg-dorado text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+                <button id="menuMovilBtn" class="lg:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menú móvil -->
+        <div id="menuMovil" class="lg:hidden hidden bg-white py-4 px-6 shadow-lg border-t border-gray-100">
+            <div class="flex flex-col space-y-1">
+                <a href="index.html" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-home mr-3 text-dorado"></i> Inicio
+                </a>
+                <a href="damas.html" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-flower mr-3 text-dorado"></i> Damas
+                </a>
+                <a href="caballero.html" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-gem mr-3 text-dorado"></i> Caballeros
+                </a>
+                <a href="niños y niñas.html" class="py-3 text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-child mr-3 text-dorado"></i> Niños y Niñas
+                </a>
+                <a href="index.html#brands" class="py-3 text-gray-700 hover:text-dorado font-medium border-b border-gray-100 flex items-center">
+                    <i class="fas fa-copyright mr-3 text-dorado"></i> Marcas
+                </a>
+                <a href="index.html#contact" class="py-3 text-gray-700 hover:text-dorado font-medium flex items-center">
+                    <i class="fas fa-phone-alt mr-3 text-dorado"></i> Contacto
+                </a>
+            </div>
+            
+            <div class="mt-6 pt-6 border-t border-gray-100 flex justify-center space-x-6">
+                <a href="#" class="text-gray-700 hover:text-dorado transition duration-300">
+                    <i class="fas fa-search text-lg"></i>
+                </a>
+                <a href="login.html" class="text-gray-700 hover:text-dorado transition duration-300">
+                    <i class="fas fa-user text-lg"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-dorado transition duration-300 relative">
+                    <i class="fas fa-shopping-bag text-lg"></i>
+                    <span class="carrito-contador absolute -top-2 -right-2 bg-dorado text-black text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-20 sm:pt-24 lg:pt-28 flex items-center justify-center text-center text-white relative overflow-hidden" style="min-height: 70vh;">
+        <div class="absolute inset-0 opacity-5">
+            <i class="fas fa-star absolute text-4xl" style="top: 10%; left: 10%;"></i>
+            <i class="fas fa-heart absolute text-5xl" style="top: 20%; right: 15%;"></i>
+            <i class="fas fa-star absolute text-3xl" style="bottom: 20%; left: 15%;"></i>
+            <i class="fas fa-heart absolute text-4xl" style="bottom: 15%; right: 10%;"></i>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10 py-16 lg:py-20">
+            <h1 class="font-titulo text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in">
+                Perfumes para Niños y Niñas
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-100 mb-8 max-w-2xl mx-auto font-light">
+                Aromas frescos, divertidos y seguros para los más pequeños
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-dorado py-3 px-8 text-sm font-semibold">
+                    <i class="fas fa-shopping-bag mr-2"></i> Comprar Ahora
+                </button>
+                <button class="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition duration-300">
+                    Ver Catálogo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Filtros -->
+    <section class="bg-gray-50 py-8 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Categoría</label>
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dorado">
+                        <option>Todas las categorías</option>
+                        <option>Perfumes para niños</option>
+                        <option>Perfumes para niñas</option>
+                        <option>Unisex</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Marca</label>
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dorado">
+                        <option>Todas las marcas</option>
+                        <option>Disney</option>
+                        <option>Frozen</option>
+                        <option>Avengers</option>
+                        <option>Hello Kitty</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Rango de Precio</label>
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dorado">
+                        <option>Todos los precios</option>
+                        <option>Menos de $50</option>
+                        <option>$50 - $100</option>
+                        <option>$100 - $150</option>
+                        <option>Más de $150</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="py-16 lg:py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-titulo text-3xl lg:text-4xl font-bold text-center mb-4 text-black">
+                Nuestras Fragancias Infantiles
+            </h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Descubre nuestra colección de perfumes especialmente formulados para niños y niñas. Aromas suaves, seguros y divertidos.
+            </p>
+
+            <!-- Grid de Productos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Producto 1 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden">
+                    <div class="relative bg-gray-100 h-64 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-bottle text-8xl text-gray-300 opacity-30 absolute"></i>
+                        <div class="text-center z-10">
+                            <i class="fas fa-heart text-6xl text-dorado mb-4 block animate-pulse"></i>
+                            <p class="text-sm font-semibold text-gray-600">Disney Princess</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-titulo text-xl font-bold text-black mb-2">Princesa Mágica</h3>
+                        <p class="text-sm text-gray-600 mb-3">Aroma floral y dulce con notas de fresas</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star-half-alt text-sm"></i>
+                            </div>
+                            <span class="text-xs text-gray-500">(45)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-dorado">$65.00</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">50ml</span>
+                        </div>
+                        <button class="w-full py-2 btn-dorado text-black font-semibold rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-shopping-bag mr-2"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden">
+                    <div class="relative bg-gray-100 h-64 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-bottle text-8xl text-gray-300 opacity-30 absolute"></i>
+                        <div class="text-center z-10">
+                            <i class="fas fa-snowflake text-6xl text-gray-700 mb-4 block animate-spin" style="animation-duration: 3s;"></i>
+                            <p class="text-sm font-semibold text-gray-600">Frozen</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-titulo text-xl font-bold text-black mb-2">Elsa Congelada</h3>
+                        <p class="text-sm text-gray-600 mb-3">Aroma fresco con notas de hielo y menta</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-xs text-gray-500">(52)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-dorado">$70.00</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">50ml</span>
+                        </div>
+                        <button class="w-full py-2 btn-dorado text-black font-semibold rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-shopping-bag mr-2"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden">
+                    <div class="relative bg-gray-100 h-64 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-bottle text-8xl text-gray-300 opacity-30 absolute"></i>
+                        <div class="text-center z-10">
+                            <i class="fas fa-child text-6xl text-gray-700 mb-4 block"></i>
+                            <p class="text-sm font-semibold text-gray-600">Avengers</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-titulo text-xl font-bold text-black mb-2">Super Héroe</h3>
+                        <p class="text-sm text-gray-600 mb-3">Aroma energético y aventurero</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star-half-alt text-sm"></i>
+                            </div>
+                            <span class="text-xs text-gray-500">(38)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-dorado">$68.00</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">50ml</span>
+                        </div>
+                        <button class="w-full py-2 btn-dorado text-black font-semibold rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-shopping-bag mr-2"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden">
+                    <div class="relative bg-gray-100 h-64 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-bottle text-8xl text-gray-300 opacity-30 absolute"></i>
+                        <div class="text-center z-10">
+                            <i class="fas fa-cat text-6xl text-gray-700 mb-4 block"></i>
+                            <p class="text-sm font-semibold text-gray-600">Hello Kitty</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-titulo text-xl font-bold text-black mb-2">Gatito Adorable</h3>
+                        <p class="text-sm text-gray-600 mb-3">Aroma suave con notas de cereza</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-xs text-gray-500">(61)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-dorado">$62.00</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">50ml</span>
+                        </div>
+                        <button class="w-full py-2 btn-dorado text-black font-semibold rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-shopping-bag mr-2"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden">
+                    <div class="relative bg-gray-100 h-64 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-bottle text-8xl text-gray-300 opacity-30 absolute"></i>
+                        <div class="text-center z-10">
+                            <i class="fas fa-sun text-6xl text-gray-700 mb-4 block animate-bounce"></i>
+                            <p class="text-sm font-semibold text-gray-600">Tropical</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-titulo text-xl font-bold text-black mb-2">Verano Tropical</h3>
+                        <p class="text-sm text-gray-600 mb-3">Aroma frutal con notas de piña y mango</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star-half-alt text-sm"></i>
+                            </div>
+                            <span class="text-xs text-gray-500">(44)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-dorado">$64.00</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">50ml</span>
+                        </div>
+                        <button class="w-full py-2 btn-dorado text-black font-semibold rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-shopping-bag mr-2"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden">
+                    <div class="relative bg-gray-100 h-64 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-bottle text-8xl text-gray-300 opacity-30 absolute"></i>
+                        <div class="text-center z-10">
+                            <i class="fas fa-leaf text-6xl text-gray-700 mb-4 block"></i>
+                            <p class="text-sm font-semibold text-gray-600">Natural</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-titulo text-xl font-bold text-black mb-2">Bosque Mágico</h3>
+                        <p class="text-sm text-gray-600 mb-3">Aroma verde con notas de lavanda y manzana</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-xs text-gray-500">(55)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-dorado">$66.00</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">50ml</span>
+                        </div>
+                        <button class="w-full py-2 btn-dorado text-black font-semibold rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-shopping-bag mr-2"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden">
+                    <div class="relative bg-gray-100 h-64 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-bottle text-8xl text-gray-300 opacity-30 absolute"></i>
+                        <div class="text-center z-10">
+                            <i class="fas fa-star text-6xl text-dorado mb-4 block animate-pulse"></i>
+                            <p class="text-sm font-semibold text-gray-600">Magical</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-titulo text-xl font-bold text-black mb-2">Noche Estrellada</h3>
+                        <p class="text-sm text-gray-600 mb-3">Aroma mágico con notas de violeta y almíbar</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star-half-alt text-sm"></i>
+                            </div>
+                            <span class="text-xs text-gray-500">(39)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-dorado">$69.00</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">50ml</span>
+                        </div>
+                        <button class="w-full py-2 btn-dorado text-black font-semibold rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-shopping-bag mr-2"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="perfume-bottle bg-white rounded-lg overflow-hidden">
+                    <div class="relative bg-gray-100 h-64 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-bottle text-8xl text-gray-300 opacity-30 absolute"></i>
+                        <div class="text-center z-10">
+                            <i class="fas fa-candy-cane text-6xl text-gray-700 mb-4 block"></i>
+                            <p class="text-sm font-semibold text-gray-600">Sweet</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-titulo text-xl font-bold text-black mb-2">Dulce Caramelo</h3>
+                        <p class="text-sm text-gray-600 mb-3">Aroma dulce con notas de algodón de azúcar</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-xs text-gray-500">(67)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-dorado">$63.00</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">50ml</span>
+                        </div>
+                        <button class="w-full py-2 btn-dorado text-black font-semibold rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-shopping-bag mr-2"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Información -->
+    <section class="py-16 lg:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="font-titulo text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
+                ¿Por qué elegir nuestros perfumes infantiles?
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Ventaja 1 -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-dorado"></i>
+                    </div>
+                    <h3 class="font-titulo text-xl font-bold mb-3 text-black">100% Seguro</h3>
+                    <p class="text-gray-600">Formulados con ingredientes seguros y dermatológicamente probados para piel sensible infantil.</p>
+                </div>
+
+                <!-- Ventaja 2 -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-2xl text-dorado"></i>
+                    </div>
+                    <h3 class="font-titulo text-xl font-bold mb-3 text-black">Eco-amigable</h3>
+                    <p class="text-gray-600">Productos naturales y sostenibles que cuidamos el medio ambiente y a nuestros pequeños.</p>
+                </div>
+
+                <!-- Ventaja 3 -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-smile text-2xl text-dorado"></i>
+                    </div>
+                    <h3 class="font-titulo text-xl font-bold mb-3 text-black">Divertidos</h3>
+                    <p class="text-gray-600">Diseños y aromas temáticos basados en personajes favoritos de los niños y niñas.</p>
+                </div>
+
+                <!-- Ventaja 4 -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-2xl text-dorado"></i>
+                    </div>
+                    <h3 class="font-titulo text-xl font-bold mb-3 text-black">De Calidad</h3>
+                    <p class="text-gray-600">Marcas reconocidas internacionalmente con estándares de calidad garantizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="py-16 lg:py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-titulo text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
+                Lo que dicen nuestros clientes
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-white rounded-lg p-6 shadow-md border-t-4 border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-700"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">María López</h4>
+                            <p class="text-sm text-gray-500">Mamá de Sofía</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-gray-600">"¡A mi hija le encanta! El aroma es delicioso y muy suave. Excelente calidad y seguro para su piel."</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-white rounded-lg p-6 shadow-md border-t-4 border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-700"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Carlos Rodríguez</h4>
+                            <p class="text-sm text-gray-500">Papá de Juan</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-gray-600">"Los perfumes para niños que compré son perfectos. Buen precio, envío rápido y excelente atención."</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-white rounded-lg p-6 shadow-md border-t-4 border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-700"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Ana García</h4>
+                            <p class="text-sm text-gray-500">Mamá de Marta</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star-half-alt text-sm"></i>
+                    </div>
+                    <p class="text-gray-600">"Recomiendo totalmente. Los perfumes son seguros, duran mucho tiempo y los niños los aman."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 bg-black text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-titulo text-3xl lg:text-4xl font-bold mb-4">
+                ¿Listo para hacer feliz a tu hijo o hija?
+            </h2>
+            <p class="text-lg mb-8 opacity-90">
+                Explora nuestra colección completa y encuentra el aroma perfecto
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-dorado py-3 px-8 text-black font-semibold rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-shopping-cart mr-2"></i> Ver Todo el Catálogo
+                </button>
+                <button class="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition duration-300">
+                    <i class="fas fa-envelope mr-2"></i> Contactar Soporte
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="logo-principal text-2xl font-bold mb-4">PERFUMSHOP</h4>
+                    <p class="text-gray-400 text-sm">Tu tienda de perfumes de lujo online. Aromas para todos.</p>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Categorías</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="damas.html" class="hover:text-dorado transition">Perfumes para Damas</a></li>
+                        <li><a href="caballero.html" class="hover:text-dorado transition">Perfumes para Caballeros</a></li>
+                        <li><a href="niños y niñas.html" class="hover:text-dorado transition">Perfumes para Niños</a></li>
+                        <li><a href="mixto.html" class="hover:text-dorado transition">Perfumes Mixtos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Información</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="politicas_de_segurdad.html" class="hover:text-dorado transition">Políticas de Seguridad</a></li>
+                        <li><a href="terminos_condiciones.html" class="hover:text-dorado transition">Términos y Condiciones</a></li>
+                        <li><a href="login.html" class="hover:text-dorado transition">Cuenta</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Contacto</h5>
+                    <p class="text-gray-400 text-sm mb-2">
+                        <i class="fas fa-phone text-dorado mr-2"></i> +34 123 456 789
+                    </p>
+                    <p class="text-gray-400 text-sm mb-4">
+                        <i class="fas fa-envelope text-dorado mr-2"></i> info@perfumshop.com
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-dorado transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-dorado transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-dorado transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 PERFUMSHOP. Todos los derechos reservados. Diseñado con <i class="fas fa-heart text-red-500"></i> para ti.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jscrip.js"></script>
+    <script>
+        // Menu móvil toggle
+        const menuMovilBtn = document.getElementById('menuMovilBtn');
+        const menuMovil = document.getElementById('menuMovil');
+        
+        if (menuMovilBtn) {
+            menuMovilBtn.addEventListener('click', () => {
+                menuMovil.classList.toggle('hidden');
+            });
+        }
+
+        // Animación de scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+    </script>
+    <script src="/assets/js/carrito.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@
     <title>Perfumes para Caballeros | PERFUMSHOP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/assets/style/estilos.css">
+    <link rel="stylesheet" href="/assets/style/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-800">
@@ -47,7 +47,7 @@
                 </a>
                 <a href="#" class="text-gray-700 hover:text-dorado transition duration-300 relative">
                     <i class="fas fa-shopping-bag"></i>
-                    <span class="absolute -top-2 -right-2 bg-dorado text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    <span class="carrito-contador absolute -top-2 -right-2 bg-dorado text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
                 </a>
                 <button id="menuMovilBtn" class="lg:hidden text-gray-700 focus:outline-none">
                     <i class="fas fa-bars text-xl"></i>
@@ -584,5 +584,6 @@
             });
         });
     </script>
+    <script src="/assets/js/carrito.js"></script>
 </body>
 </html>
